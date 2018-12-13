@@ -1,0 +1,21 @@
+{
+  "name": "WebApp",
+  "version": "1.0.0",
+  "description": "Userinterface build with the MERN-Stack",
+  "main": "indexserver.js",
+  "scripts": {
+    "start": "node indexserver.js",
+    "server": "nodemon indexserver.js"
+  },
+  "author": "Florian Thom",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.8"
+  }
+}
