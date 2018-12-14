@@ -1,2 +1,3 @@
-# WepApp-SemanticSearch
-Simple web-interface to get search-results
+# SemtanticSearch-SearchEngine
+
+This Project aims to build an intelligent seach-engine.
