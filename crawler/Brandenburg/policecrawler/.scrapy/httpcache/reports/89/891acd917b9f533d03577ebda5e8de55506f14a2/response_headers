@@ -1,0 +1,15 @@
+Date: Tue, 27 Nov 2018 11:29:16 GMT
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Cache-Control: max-age=0, private
+Pragma: no-cache
+Strict-Transport-Security: max-age=63072000
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: CMS_SESSION_ID=2tnjb82mqcq64mttdj74pl9ud1; path=/;HttpOnly;Secure
+Content-Type: text/html; charset=UTF-8
+X-Cache: MISS from Land-Brandenburg-TLS-Proxy
+X-Cache-Lookup: MISS from Land-Brandenburg-TLS-Proxy:80
+Via: 1.1 Land-Brandenburg-TLS-Proxy (squid)
