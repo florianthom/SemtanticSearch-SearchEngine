@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>
+            Suche |
+            Polizeimeldungen | 
+        Polizei Brandenburg
+    </title>
+
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!-- start FacebookMeta -->
+<meta property="og:url" content="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie?reset=1" />
+<meta property="og:title" content="Meldungen" />
+<meta property="og:description" content="POLIZEI Brandenburg" />
+<meta property="og:image" content="https://polizei.brandenburg.de/files/images/full/981728/polizeiabzeichen.jpg" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="de_DE" />
+<!-- end FacebookMeta -->
+
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://polizei.brandenburg.de/pressemeldungen/rss">
+
+    <meta name="description" content="">
+    <script type="text/javascript">var root_url = '';
+        document.getElementsByTagName("html")[0].className = "js"; </script>
+
+        <link rel="stylesheet" href="/css/de2c9f5.css?v4.5"/>
+            <link rel="stylesheet" href="/css/print.css?v4.5" media="print"/>
+    
+    
+    <link rel="stylesheet" href="/css/39a4f96.css?v4.5"/>
+    
+    
+    <!--
+'@ZdpolIwInformativBundle/Resources/public/css/print.css'
+-->
+<link rel="stylesheet" href="/css/9f8a7f0.css?v4.5" media="print"/>
+
+<!--[if lt IE 9]>
+<script src="/bundles/zdpoliwinformativ/js/respond.min.js"></script>
+        <script>
+            // Adding datalist support to our anchestors
+            if (!('options' in document.createElement('datalist'))) {
+                document.createElement('datalist');
+            }
+        </script>
+<![endif]-->
+<!--[if IE 8]>
+    <link rel="stylesheet" href="/css/637c3e7.css?v4.5"/>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="/css/7ae1fe0.css?v4.5"/>
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" href=""/>
+<![endif]-->    <script src="/bundles/zdpoliwinformativ/js/ReadSpeaker2.5/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+</head>
+<body class="pbb-lang-de">
+
+<div id="pbb-wrapper">
+    <div id="pbb-cookielaw" data-cmd-autorun="cookielaw.init" data-param-autorun="pbb_cookie_notification">
+        <div id="pbb-cookielaw-inner">
+            <h2>Cookie-Hinweis</h2>
+            <p>Um diesen Service anbieten zu können verwendet die Website Cookies. Durch die Nutzung der Seite erklären Sie sich damit einverstanden.</p>
+            <div id="pbb-cookieaccept">
+                <form id="pbb-cookie-form" action="/seite/cookie-information" method="get">
+                    <input name="cookie" id="pbb-cookie-no" class="pbb-cookie-no" value="Mehr Information" type="submit">
+                    <input name="cookie" id="pbb-cookie-yes" class="pbb-cookie-yes" value="Ok" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+<ul id="pbb-sprunglinks">
+    <li><a href="#pbb-nav">Direkt zur Hauptnavigation</a></li>
+    <li><a href="#pbb-submenu">Direkt zur Breichsnavigation</a></li>
+    <li><a href="#pbb-subcontent">Direkt zum Inhalt</a></li>
+</ul>
+    <div id="pbb-ribbon" class="pbb-detail">
+    <!-- START 110-TEASER -->
+        <div class="pbb-notruf">Notruf 110</div>
+    <p>In dringenden<br />Fällen!</p>
+        <!-- END 110-TEASER -->
+</div>
+<div id="pbb-header">
+    <div id="pbb-inner-header">
+        <div id="pbb-meta-nav">
+            <ul id="pbb-language-nav">
+                <!-- START LANGUAGE MENU -->
+                <li class="pbb-active">
+                    <a href="/" title="Seite in deutscher Sprache
+                    darstellen">Deutsch</a>
+                </li>
+                <li >
+                    <a href="/en" title="Display page in english" lang="en">English</a>
+                </li>
+                <li >
+                    <a href="/pl" title="Pokaż stronę po polsku" lang="pl">Polski</a>
+                </li>
+                <!-- END LANGUAGE MENU -->
+            </ul>
+            <ul id="pbb-feature-nav">
+                <!-- START META FUNCTIONS -->
+                                <li class="pbb-presslink">
+                    <a title="Pressekontakt" href="/seite/presse/62783">
+                        <span class="pbb-sprite-holder pbb-sprite-header_press">Presse</span>
+                        &nbsp; Presse
+                    </a>
+                </li>
+                <li><a href="/seite/gebaerdensprache/62797"
+                       title="Inhalte mit Gebärdensprachenvideos anzeigen">
+                        <span class="pbb-sprite-holder pbb-sprite-img-master
+                        pbb-sprite-header_deutschegebaerdensprache">Deutsche Gebärdensprache</span></a>
+                </li>
+                                <li><a href="/seite/notfall-fax/62327" title="Notfallfax für Schwerhörige"><span class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_dsb">Deutscher Schwerhörigenbund</span></a></li>
+                <li><a href="" data-cmd-click="zoomPage" data-cmd-autorun="zoomPage" data-param-autorun="init"
+                       title="Schriftgröße anpassen"><span
+                                class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_schriftgroesse">Schriftgröße einstellen</span></a>
+                </li>
+                <li><a href="/onlineservice/auswahl" title="Kontakt"><span
+                                class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_kontakt">Kontakt</span></a>
+                </li>
+                <!-- END META FUNCTIONS -->
+            </ul>
+                         <ul id="pbb-button-nav">
+    <!-- START META BUTTON -->
+            <li><a href="/standorte_und_erreichbarkeiten" title="Dienststellensuche">
+                <span class="pbb-left pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_bg_left"></span><span
+                        class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_dienststellensuche pbb-icon"></span><span>Dienststellensuche</span><span
+                        class="pbb-right pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_bg_right"></span>
+            </a>
+        </li>
+        <li class="pbb-not-logged-in">
+            <a href="/konto/login" title="Login">
+                <span class="pbb-left pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_bg_left"></span>
+                <span class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_login pbb-icon"></span>
+                <span>Login</span>
+                <span class="pbb-right pbb-sprite-holder pbb-sprite-img-master pbb-sprite-header_bg_right"></span>
+            </a>
+        </li>
+        <!-- END META BUTTON -->
+</ul>
+                    </div>
+
+
+        <!-- START SEARCH -->
+        <div role="search" id="pbb-search">
+            <form action="/suche/schnell" method="post">
+                <div>
+                    <input title="Suchbegriff eintragen" placeholder="Suchbegriff"
+                           name="form[query]"
+                           class="pbb-highlightfield"
+                           data-cmd-autorun="search.autosuggest"
+                           data-param-autorun="/suche/suggest/[[query]]"
+                           value=""
+                    />
+                    <input value="" class="pbb-searchbutton" type="submit">
+                </div>
+            </form>
+        </div>
+        <!-- END SEARCH -->
+
+        <!-- START LOGO -->
+        <div role="banner" id="pbb-logo"><a href="/"><img
+                        src="/bundles/zdpoliwinformativ/images/header/logo.gif"
+                        width="216" height="81" alt="Polizei Brandenburg"
+                        title="Link zur Startseite"
+                        /></a></div>
+        <!-- END LOGO -->
+        <div role="navigation" id="pbb-nav">
+            <ul id="pbb-main-container">
+                <li class="pbb-nav-1 pbb-nav-item-1">
+                                                                
+                    <a href="/" title="Startseite"><span
+                                class="pbb-sprite-holder pbb-sprite-img-master pbb-sprite-menu_home"></span></a>
+                </li>
+                                                                                
+                                                                                    <li class="pbb-nav-1 pbb-nav-item-2">
+                                                        <a href="/liste/buergerservice/73511">Bürgerservice</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Bürgerservice</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/onlineservice/auswahl_strafanzeige">
+                                                                Strafanzeige erstatten
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/antragsformulare-und-ansprechpartner-zum/62400">
+                                                                Anträge Waffenrecht
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/bussgeldrechner">
+                                                                Bußgeldrechner
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/konto/login">
+                                                                Blitzerfoto einsehen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/konto/uebersicht">
+                                                                Benutzerkonto
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/polizeiliche-vorladung/420658">
+                                                                Polizeiliche Vorladung
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/meldungen-und-hinweise-und-anzeigen/416333">
+                                                                Meldungen &amp; Anzeigen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/berechtigungen-und-dokumente/60405">
+                                                                Berechtigungen &amp; Dokumente
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/onlineservice/auswahl">
+                                                                Weitere Online-Services
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/standorte_und_erreichbarkeiten">
+                                                                Standorte &amp; Erreichbarkeiten
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/polizeiapp">
+                                                                Polizei-App
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/die-servicerufnummer-der-polizei-wenn-si/554479">
+                                                                Bürgertelefon
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/notfall-fax-fuer-die-rufnummer-110/62327">
+                                                                Notfall-Fax
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/die-neuesten-polizeimeldungen-auf-dem-sc/60761">
+                                                                RSS-Feeds
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/verantwortlichkeiten-und-bestimmungen-/73520">
+                                                                Rechtliche Hinweise
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="http://www.polizei.de/">
+                                                                Andere Polizeiportale 
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head">Der Online-Service: Ihr zentraler Kontakt zur Polizei</span>
+
+                                                <a href="/onlineservice/auswahl"
+                                                   title="Der Link öffnet den gesamten Artikel: Weitere Online-Services">
+                                                    <img src="/files/images/thumb_medium/29186/galerie_schupo.jpg"
+                                                         alt="Polizistin und Polizist"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/onlineservice/auswahl"
+                                                    title="Der Link öffnet den gesamten Artikel: Weitere Online-Services">
+                                                    Ihre Möglichkeiten:</a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/onlineservice/auswahl"
+                                                       title="Der Link öffnet den gesamten Artikel: Weitere Online-Services">
+                                                            Anzeige erstatten, bei der Polizei bewerben, Versammlung anmelden, Orchester anfragen,  Waffenrecht beantragen, Hinweis geben, Lob oder Beschwerde mitteilen und vieles mehr...
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                            <li class="pbb-nav-1 pbb-nav-item-3 pbb-active">
+                                                        <a href="/liste/meldungen-und-warndienste/73508">Aktuelles</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Aktuelles</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Meldungen/kategorie?reset=1" class="pbb-active">
+                                                                Polizeimeldungen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Termin/kategorie?reset=true">
+                                                                Termine für Bürger
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/warnhinweise/955680">
+                                                                Warnhinweise
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/verkehrsmeldungen">
+                                                                Verkehrswarnungen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/pegelstaende">
+                                                                Pegelstände für Gewässer
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/waldbrand">
+                                                                Waldbrandwarnungen
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head">Polizei Brandenburg in den sozialen Medien</span>
+
+                                                <a href="/seite/polizei-brandenburg-in-sozialen-medien/380480"
+                                                   title="Der Link öffnet den gesamten Artikel: Polizei Brandenburg in sozialen Medien">
+                                                    <img src="/files/images/thumb_medium/29186/galerie_schupo.jpg"
+                                                         alt="Polizistin und Polizist"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/seite/polizei-brandenburg-in-sozialen-medien/380480"
+                                                    title="Der Link öffnet den gesamten Artikel: Polizei Brandenburg in sozialen Medien">
+                                                    Soziales Netzwerk</a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/seite/polizei-brandenburg-in-sozialen-medien/380480"
+                                                       title="Der Link öffnet den gesamten Artikel: Polizei Brandenburg in sozialen Medien">
+                                                            Informieren Sie sich zeitnah über aktuelle Themen und folgen uns auch in den sozialen Medien!
+
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                                <li class="pbb-nav-1 pbb-nav-item-4">
+                                                        <a href="/suche/typ/Fahndung/kategorie?reset=1">Fahndungen</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Fahndungen</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Fahndung/kategorie/Gesuchte%20Straft%C3%A4ter?reset=1">
+                                                                Gesuchte Straftäter
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Fahndung/kategorie/Vermisste%20Personen?reset=1">
+                                                                Vermisste Personen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Fahndung/kategorie/Gestohlene%20Sachen?reset=1">
+                                                                Gestohlene Sachen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/suche/kategorie/Zeugen%20gesucht?type=Fahndung&amp;reset=1">
+                                                                Zeugen gesucht
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="https://www.bka.de/SiteGlobals/Forms/Suche/Fahndungsliste_Personenfahndung_Formular.html?nn=27878">
+                                                                Fahndungen des BKA
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="https://www.rbb-online.de/taeteropferpolizei/index.html">
+                                                                Täter-Opfer-Polizei
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head"></span>
+
+                                                <a href="/suche/typ/Fahndung/kategorie?reset=1"
+                                                   title="Der Link öffnet den gesamten Artikel: Fahndungen">
+                                                    <img src="/files/images/thumb_medium/58709/polizeiabsperrung_.jpg"
+                                                         alt="Polizeiabsperrung"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/suche/typ/Fahndung/kategorie?reset=1"
+                                                    title="Der Link öffnet den gesamten Artikel: Fahndungen">
+                                                    Helfen Sie uns bei der Aufklärung von Straftaten! </a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/suche/typ/Fahndung/kategorie?reset=1"
+                                                       title="Der Link öffnet den gesamten Artikel: Fahndungen">
+                                                            Auf Ihre Hinweise kommt es an!
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                                <li class="pbb-nav-1 pbb-nav-item-5">
+                                                        <a href="/liste/vorbeugen-und-schuetzen/73513">Vorbeugen &amp; Schützen</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Vorbeugen &amp; Schützen</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/liste/gewalt/416269">
+                                                                Gewalt
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/opferschutz-und-opferhilfe/416272">
+                                                                Opferschutz &amp; Opferhilfe
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/drogen-sucht-und-abhaengigkeit/416262">
+                                                                Sucht &amp; Drogen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/informationen-rund-um-das-thema-betrug/416294">
+                                                                Betrug
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/neue-medien-und-internet/416300">
+                                                                Neue Medien &amp; Internet
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/eigentums-und-diebstahlschutz/416316">
+                                                                Eigentum &amp; Diebstahl
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/rund-um-den-strassenverkehr/416317">
+                                                                Straßenverkehr
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/liste/fundmunition-und-bauen-in-kampfmittelbel/59770">
+                                                                Fundmunition
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/wenn-sie-eine-reise-ins-nachbarland-pole/62972">
+                                                                Auslandsreisen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/kommunale-kriminalpraevention/704116">
+                                                                Kommunale Kriminalprävention
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head">Hier bekommen Sie Unterstützung!</span>
+
+                                                <a href="/liste/was-ist-wenn-/35361"
+                                                   title="Der Link öffnet den gesamten Artikel: Was ist wenn...?">
+                                                    <img src="/files/images/thumb_medium/59091/opferhilfe_quelle_polizeiliche_kriminalpr%25C3%25A4vention.jpg"
+                                                         alt="Traurige Frau steht am Fenster und schaut in die Ferne- Quelle: Polizeiliche Kriminalprävention"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/liste/was-ist-wenn-/35361"
+                                                    title="Der Link öffnet den gesamten Artikel: Was ist wenn...?">
+                                                    Sie wurden Opfer einer Straftat oder möchten sich davor schützen? Hier erfahren Sie, was zu tun ist und wer Ihnen helfen kann.</a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/liste/was-ist-wenn-/35361"
+                                                       title="Der Link öffnet den gesamten Artikel: Was ist wenn...?">
+                                                            
+
+
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                                <li class="pbb-nav-1 pbb-nav-item-6">
+                                                        <a href="/liste/bilanzen-und-informationsmaterialien/71968">Daten &amp; Fakten</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Daten &amp; Fakten</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/liste/statistiken-zur-kriminalitaetslage-im-la/71666">
+                                                                Statistiken zur Kriminalität
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/polizeiliche-verkehrsunfallstatistiken-i/71620">
+                                                                Statistiken zum Straßenverkehr
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/informationen-der-zentralen-bussgeldstel/59868">
+                                                                Verwarn- und Bußgelder
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/die-mitarbeiterzeitschrift-der-polizei/71999">
+                                                                Polizeizeitung Info 110
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/wichtige-informationsblaetter-fuer-ihre-/71736">
+                                                                Broschüren und Flyer
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/lexikon/">
+                                                                Lexikon polizeilicher Begriffe
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head">Aktuelle Zahlen:</span>
+
+                                                <a href="/liste/kriminalitaetslage-2017/955381"
+                                                   title="Der Link öffnet den gesamten Artikel: Kriminalitätslage 2017">
+                                                    <img src="/files/images/thumb_medium/956230/kriminalitaetslage_2017.jpg"
+                                                         alt="Kriminalitaetslage 2017"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/liste/kriminalitaetslage-2017/955381"
+                                                    title="Der Link öffnet den gesamten Artikel: Kriminalitätslage 2017">
+                                                    Kriminalitätslage 2017</a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/liste/kriminalitaetslage-2017/955381"
+                                                       title="Der Link öffnet den gesamten Artikel: Kriminalitätslage 2017">
+                                                            
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                                <li class="pbb-nav-1 pbb-nav-item-7">
+                                                        <a href="/liste/polizeiberuf/73514">Beruf &amp; Karriere</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Beruf &amp; Karriere</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/suche/typ/Pressemeldung/kategorie/Stellenausschreibungen?reset=1">
+                                                                Stellenausschreibungen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/standorte_und_erreichbarkeiten?art=einstellungsberater">
+                                                                Einstellungsberater
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/onlineservice/bewerbung/auswahl">
+                                                                Bewerben für den Polizeiberuf
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/sixcms/detail.php?template=rangliste">
+                                                                Rangliste für Bewerber
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/liste/ausbildung-zum-polizeibeamten/60247">
+                                                                Ausbildung bei der Polizei
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/studium-zum-polizeibeamten/60256">
+                                                                Studium bei der Polizei
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/einblick-in-den-polizeiberuf/60185">
+                                                                (Schüler) Praktikum und Referendariat
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/sonderprogramm-feldjaeger/230372">
+                                                                Sonderprogramm Feldjäger
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/sportfoerdergruppe/143032">
+                                                                Sportfördergruppe
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="http://www.fhpolbb.de/">
+                                                                Webseite der Fachhochschule der Polizei
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="http://polizei-brandenburg-karriere.de/">
+                                                                Karriereportal  der Brandenburger Polizei
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head"></span>
+
+                                                <a href="/liste/polizeiberuf/73514"
+                                                   title="Der Link öffnet den gesamten Artikel: Polizeiberuf">
+                                                    <img src="/files/images/thumb_medium/35318/ausbildung_studium.jpg"
+                                                         alt="Polizeischüler beim Lernen in Uniform"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/liste/polizeiberuf/73514"
+                                                    title="Der Link öffnet den gesamten Artikel: Polizeiberuf">
+                                                    Wir suchen Sie! </a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/liste/polizeiberuf/73514"
+                                                       title="Der Link öffnet den gesamten Artikel: Polizeiberuf">
+                                                            Hier kommen Sie zu aktuellen Stellenangeboten, Praktika sowie Ausbildung und Studium! 
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                                                                                <li class="pbb-nav-1 pbb-nav-item-8">
+                                                        <a href="/liste/brandenburger-polizei/62248">Die Polizei</a>
+
+                                                            <div class="pbb-nav-sub-container">
+                                    <ul class="pbb-nav-sub-inner-container">
+                                        <li class="pbb-nav-sub-part pbb-left">
+                                            <span class="pbb-nav-sub-head">Die Polizei</span>
+
+                                                                                                                                        <ul class="pbb-first">
+                                                                                                            <li>
+                                                            <a href="/standorte_und_erreichbarkeiten">
+                                                                Standorte und Erreichbarkeiten
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/uebergeordnete-dienststellen-der-polizei/60738">
+                                                                Übergeordnete Dienststellen
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                                                                                                                        <ul class="pbb-second">
+                                                                                                            <li>
+                                                            <a href="/liste/aufgaben-und-taetigkeitsfelder-der-poliz/60475">
+                                                                Aufgaben und Tätigkeitsfelder
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/ausruestung-und-technik/62300">
+                                                                Ausrüstung und Technik
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/seite/laufbahnen-und-dienstgrade-in-der-brande/60153">
+                                                                Laufbahnen
+                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <a href="/liste/geschichtliches/563014">
+                                                                Geschichtliches
+                                                            </a>
+                                                        </li>
+                                                                                                     </ul>
+                                            
+                                        </li>
+                                                                                                                            <li class="pbb-nav-sub-part pbb-right">
+
+                                                <span class="pbb-nav-sub-head"></span>
+
+                                                <a href="/liste/brandenburger-polizei/62248"
+                                                   title="Der Link öffnet den gesamten Artikel: Die Polizei">
+                                                    <img src="/files/images/thumb_medium/62675/taucher_bei_der_arbeit.jpg"
+                                                         alt="Polizeitaucher bei der Arbeit"/>
+                                                </a>
+                                            <span class="pbb-nav-teaser-title">
+                                                <a href="/liste/brandenburger-polizei/62248"
+                                                    title="Der Link öffnet den gesamten Artikel: Die Polizei">
+                                                    So facettenreich sind polizeiliche Aufgaben! Schauen Sie rein, um Näheres zu erfahren!</a>
+                                            </span>
+
+                                                <p>
+                                                    <a href="/liste/brandenburger-polizei/62248"
+                                                       title="Der Link öffnet den gesamten Artikel: Die Polizei">
+                                                            
+                                                    </a>
+                                                </p>
+                                            </li>
+                                        
+                                    </ul>
+                                    <hr class="pbb-closer"/>
+                                </div>
+                             
+
+
+                            </li>
+                                                     
+
+                     
+                 
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="pbb-teaser">
+    <!-- START TEASER-AREA (dark blue) -->
+    <div id="pbb-inner-teaser">
+        <hr class="pbb-closer"/>
+    </div>
+    <!-- END TEASER-AREA -->
+</div>
+    <div id="pbb-lower-teaser" class="pbb-noContent">
+        <div id="pbb-lower-inner-teaser"></div>
+    </div>
+    <div id="pbb-context">
+        <div id="pbb-inner-context">
+            <p class="pbb-breadcrumbs">
+                                    <span class="pbb-hidden">Sie befinden sich hier:</span><a href="/">Startseite</a>
+                                                                    
+                                                            <span class="pbb-separator">/</span>
+                                <a href="/liste/meldungen-und-warndienste/73508">Aktuelles</a>
+                                                            <span class="pbb-separator">/</span>
+                                <a href="/suche/typ/Meldungen/kategorie?reset=1">Polizeimeldungen</a>
+                                                                                    
+
+
+                        
+                    
+                
+                                            </p>
+
+                            <p class="pbb-category-container">
+                    <span class="pbb-category-skyline">    Aktuelle Seite:
+</span><br/>
+            <span class="pbb-category-title">
+                    Suche
+            </span>
+                </p>
+                    </div>
+    </div>
+
+            
+
+<div id="pbb-content">
+    <div id="pbb-content-anchor"></div>
+                        <div id="pbb-submenu" class="pbb-detail pbb-wMeta">
+                                                                                                                <!-- START SUBMENU -->
+                            <ul>
+                                                                    
+                                                                            <li class="pbb-active">
+                                            <a href="/suche/typ/Meldungen/kategorie?reset=1">Polizeimeldungen</a>
+                                                                                    </li>
+                                                                                                        
+                                                                            <li><a href="/suche/typ/Termin/kategorie?reset=true">Termine für Bürger</a></li>
+                                                                                                        
+                                                                            <li><a href="/liste/warnhinweise/955680">Warnhinweise</a></li>
+                                                                                                        
+                                                                            <li><a href="/verkehrsmeldungen">Verkehrswarnungen</a></li>
+                                                                                                        
+                                                                            <li><a href="/pegelstaende">Pegelstände für Gewässer</a></li>
+                                                                                                        
+                                                                            <li><a href="/waldbrand">Waldbrandwarnungen</a></li>
+                                                                    
+                            </ul>
+                            <!-- END SUBMENU -->
+
+                        
+                                                </div>
+                <div id="pbb-subcontent">
+                                                            
+    <div class="pbb-form" id="pbb-searchrow">
+        <form name="search" method="get" action="/suche/typ/Meldungen">
+        
+
+        <fieldset>
+                <div class="pbb-leftrow pbb-masterSearch"><div class="pbb-formline"><input type="text" id="pbb-masterSearchField" name="search[query]" class="pbb-masterSearchField" data-cmd-autorun="search.autosuggest" data-param-autorun="/suche/suggest/[[query]]" /><input type="submit" id="pbb-masterSearchButton" name="search[searchButton]" class="pbb-type-button"
+               value="Suchen »"/></div></div>
+        </fieldset>
+
+        <fieldset class="pbb-suche-filter">
+            <div class="pbb-leftrow">
+                    <div class="pbb-formline"><label for="search_region">
+                        Region                    </label><select id="search_region" name="search[region]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="Überregional">Überregional</option><option value="Berlin">Berlin</option><option value="OHV">OHV</option><option value="OPR">OPR</option><option value="PR">PR</option><option value="BAR">BAR</option><option value="FFO">FFO</option><option value="MOL">MOL</option><option value="LOS">LOS</option><option value="UM">UM</option><option value="CB">CB</option><option value="LDS">LDS</option><option value="EE">EE</option><option value="OSL">OSL</option><option value="SPN">SPN</option><option value="BRB">BRB</option><option value="HVL">HVL</option><option value="PDM">PDM</option><option value="PM">PM</option><option value="TF">TF</option></select></div>
+                    <div class="pbb-formline"><label for="search_dienststelle">
+                        Dienststelle                    </label><select id="search_dienststelle" name="search[dienststelle]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="Fachhochschule der Polizei">Fachhochschule der Polizei</option><option value="Fachhochschule, Werbe- und Auswahldienst">Fachhochschule, Werbe- und Auswahldienst</option><option value="Ministerium des Innern und für Kommunales">Ministerium des Innern und für Kommunales</option><option value="Ministerium des Innern und für Kommunales, Pressestelle">Ministerium des Innern und für Kommunales, Pressestelle</option><option value="Polizei Berlin, Pressestelle">Polizei Berlin, Pressestelle</option><option value="Polizeidirektion Nord, Pressestelle">Polizeidirektion Nord, Pressestelle</option><option value="Polizeidirektion Ost, Pressestelle">Polizeidirektion Ost, Pressestelle</option><option value="Polizeidirektion Süd, Pressestelle">Polizeidirektion Süd, Pressestelle</option><option value="Polizeidirektion West, Pressestelle">Polizeidirektion West, Pressestelle</option><option value="Polizeipräsidium, Landeskriminalamt">Polizeipräsidium, Landeskriminalamt</option><option value="Polizeipräsidium, Landespolizeiorchester">Polizeipräsidium, Landespolizeiorchester</option><option value="Polizeipräsidium, Logistik">Polizeipräsidium, Logistik</option><option value="Polizeipräsidium, PD West, Personal">Polizeipräsidium, PD West, Personal</option><option value="Polizeipräsidium, Personal">Polizeipräsidium, Personal</option><option value="Polizeipräsidium, Pressestelle">Polizeipräsidium, Pressestelle</option><option value="Sächsische Staatsministerium des Innern">Sächsische Staatsministerium des Innern</option><option value="Zentraldienst der Polizei">Zentraldienst der Polizei</option><option value="Zentraldienst, Landeswebredaktion">Zentraldienst, Landeswebredaktion</option><option value="Zentraldienst, Personal">Zentraldienst, Personal</option><option value="Zentraldienst, Pressestelle">Zentraldienst, Pressestelle</option></select></div>
+                    <div class="pbb-formline"><label for="search_kategorien">
+                        Kategorien                    </label><select id="search_kategorien" name="search[kategorien]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="Beruf und Karriere">Beruf und Karriere</option><option value="Besondere Ereignisse">Besondere Ereignisse</option><option value="Bewerbung">Bewerbung</option><option value="Bombenentschärfung">Bombenentschärfung</option><option value="Brände">Brände</option><option value="Daten und Fakten">Daten und Fakten</option><option value="Demonstrationen">Demonstrationen</option><option value="Die Polizei">Die Polizei</option><option value="Fahndungen">Fahndungen</option><option value="Fahrradcodierung">Fahrradcodierung</option><option value="Gestohlene Sachen">Gestohlene Sachen</option><option value="Gesuchte Straftäter">Gesuchte Straftäter</option><option value="Infoveranstaltungen Polizeiberuf">Infoveranstaltungen Polizeiberuf</option><option value="Kriminalität">Kriminalität</option><option value="Messetermin">Messetermin</option><option value="Orchestertermine">Orchestertermine</option><option value="Pressetermin">Pressetermin</option><option value="Präventionstermine">Präventionstermine</option><option value="Schadensfall">Schadensfall</option><option value="Stellenausschreibungen">Stellenausschreibungen</option><option value="Tag der offenen Tür">Tag der offenen Tür</option><option value="Termine">Termine</option><option value="Terroranschlag">Terroranschlag</option><option value="Verkehr">Verkehr</option><option value="Verkehrsunfall">Verkehrsunfall</option><option value="Vermisste Personen">Vermisste Personen</option><option value="Vorbeugen und Schützen">Vorbeugen und Schützen</option><option value="Zeugen gesucht">Zeugen gesucht</option></select></div>
+                                            <div class="pbb-leftrow pbb-quad-1"><div class="pbb-formline"><label for="search_onlineDateFrom">
+                        Von                    </label><input type="text" id="search_onlineDateFrom" name="search[onlineDateFrom]" class="pbb-field-type-date" /></div></div>
+                                            </div>
+            <div class="pbb-rightrow">
+                                        <div class="pbb-formline"><label for="search_docType">
+                        Typ                    </label><select id="search_docType" name="search[docType]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="Fahndung">Fahndung</option><option value="Pressemeldung">Pressemeldung</option><option value="Termin">Termin</option></select></div>
+                                    <div class="pbb-formline"><label for="search_tags">
+                        Tags                    </label><select id="search_tags" name="search[tags]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="Ausbildung">Ausbildung</option><option value="Betrug">Betrug</option><option value="Bewerbung">Bewerbung</option><option value="Diebstahl">Diebstahl</option><option value="Einbruch">Einbruch</option><option value="Fahrradcodierung">Fahrradcodierung</option><option value="Gefahren">Gefahren</option><option value="Gewalt">Gewalt</option><option value="Hilfe">Hilfe</option><option value="Informationen">Informationen</option><option value="Infoveranstaltungen Polizeiberuf">Infoveranstaltungen Polizeiberuf</option><option value="Internationales">Internationales</option><option value="Internet">Internet</option><option value="Jugend">Jugend</option><option value="Kinder">Kinder</option><option value="Konzerte">Konzerte</option><option value="Kriminaltechnik">Kriminaltechnik</option><option value="Lebenslage">Lebenslage</option><option value="Opfer">Opfer</option><option value="Ordnungswidrigkeiten">Ordnungswidrigkeiten</option><option value="Polizeifahrzeuge">Polizeifahrzeuge</option><option value="Polizeitechnik">Polizeitechnik</option><option value="Rechtliches">Rechtliches</option><option value="Schadensfall">Schadensfall</option><option value="Schule">Schule</option><option value="Schutz">Schutz</option><option value="Senioren">Senioren</option><option value="Soziale Medien">Soziale Medien</option><option value="Standorte">Standorte</option><option value="Straftaten">Straftaten</option><option value="Straßenverkehr">Straßenverkehr</option><option value="Studium">Studium</option><option value="Sucht">Sucht</option><option value="Verkehr">Verkehr</option><option value="Waffenrecht">Waffenrecht</option></select></div>
+                                    <div class="pbb-formline"><label for="search_zeitraum">
+                        Zeitraum                    </label><select id="search_zeitraum" name="search[zeitraum]" class="pbb-form-combobox" placeholder="Bitte auswählen"><option value="">Bitte auswählen</option><option value="last_week">Letzte Woche</option><option value="last_month">Letzten Monat</option><option value="last_year">Letztes Jahr</option></select></div>
+                                            <div class="pbb-rightrow "><div class="pbb-formline"><label for="search_onlineDateTo">
+                        Bis                    </label><input type="text" id="search_onlineDateTo" name="search[onlineDateTo]" class="pbb-field-type-date" /></div></div>
+                                            </div>
+        </fieldset>
+
+                    <div class="pbb-form-nav"><input type="submit" id="search_resetButton" name="search[resetButton]" class="pbb-form-direction-forward pbb-person-add"
+               value="zurücksetzen"/><input type="submit" id="search_searchButton2" name="search[searchButton2]" class="pbb-form-direction-forward pbb-person-add"
+               value="Suchen »"/></div>
+
+                
+        </form>
+    </div>
+                            <div class="pbb-teaser-holder pbb-filterlist" id="pbb-search-result-pager">
+    <div class="pbb-filterlist_filters">
+        <ul class="pbb-filterlist_buttons">
+            <li class="pbb-first">Zeige
+                <a href="/suche/typ/Meldungen/kategorie/null/limit" class="pbb-active">10</a>
+                <a href="/suche/typ/Meldungen/kategorie/null/limit/20">20</a>
+                <a href="/suche/typ/Meldungen/kategorie/null/limit/30">30</a>
+                <a href="/suche/typ/Meldungen/kategorie/null/limit/50">50</a>
+                <a href="/suche/typ/Meldungen/kategorie/null/limit/alle">alle</a>
+                Einträge
+            </li>
+            <li class="pbb-last">Sortierung:
+                <a href="/suche/typ/Meldungen/category/null/sortierung">Relevanz</a>
+                                    <a href="/suche/typ/Meldungen/category/null/sortierung/online_date_dt" class="pbb-active">Datum</a>
+                            </li>
+        </ul>
+    </div>
+            <ul class="pbb-table-list pbb-table-list-medium pbb-locationlist pbb-searchlist">
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/polizei-stoppt-gestohlenes-fahrzeug/1263514">
+                                                            <img src="/files/images/full/57149/handschellen.gif"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Polizei stoppt gestohlenes Fahrzeug"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/polizei-stoppt-gestohlenes-fahrzeug/1263514">Pressemeldung                             <br><strong>Polizei stoppt gestohlenes Fahrzeug</strong><br>Nach Informationen der Polizei in Schleswig-Holstein war am Freitagabend eine PKW Golf, der kurz zu...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/HVL">HVL</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/radfahrer-bei-sturz-schwer-verletzt/1263753">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_meldungen.gif"
+                                                                                    alt="Pressemeldung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Radfahrer bei Sturz schwer verletzt"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/radfahrer-bei-sturz-schwer-verletzt/1263753">Pressemeldung                             <br><strong>Radfahrer bei Sturz schwer verletzt</strong><br>Eine Zeugin meldete am Sonntagvormittag der Polizei, dass sie aus dem Bus heraus einen gestürzten u...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PM">PM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/bei-unfall-leicht-verletzt/1263752">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_meldungen.gif"
+                                                                                    alt="Pressemeldung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Bei Unfall leicht verletzt"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/bei-unfall-leicht-verletzt/1263752">Pressemeldung                             <br><strong>Bei Unfall leicht verletzt</strong><br>Die Fahrerin eines PKW Fiat kam am Samstagnachmittag auf der L77 mit dem Fahrzeug nach rechts von d...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PM">PM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/fahndung/polizei-ermittelt-wegen-verdachts-des-ge/1263750">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_fahndung.gif"
+                                                                                    alt="Dahndung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Polizei ermittelt wegen Verdachts des gefährlichen Eingriffs in den Straßenverkehr"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/fahndung/polizei-ermittelt-wegen-verdachts-des-ge/1263750">Fahndung                             <br><strong>Polizei ermittelt wegen Verdachts des gefährlichen Eingriffs in den Straßenverkehr</strong><br>Am Samstagmorgen, gegen 03:25 Uhr befuhr ein Linienbus in Stahnsdorf  den Baustellbereich in der Po...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PM">PM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/polizei-stellt-unversteuerte-zigaretten-/1263531">
+                                                            <img src="/files/images/full/29930/polizist.gif"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Polizei stellt unversteuerte Zigaretten sicher"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/polizei-stellt-unversteuerte-zigaretten-/1263531">Pressemeldung                             <br><strong>Polizei stellt unversteuerte Zigaretten sicher</strong><br>Durch einen Hinweis aus der Bevölkerung wurde die Polizei auf einen 56-jährigen Rathenower aufmerks...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/HVL">HVL</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/brand-an-lkw/1263522">
+                                                            <img src="/files/images/full/72455/waldbrand_5.png"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Brand an LKW"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/brand-an-lkw/1263522">Pressemeldung                             <br><strong>Brand an LKW</strong><br>Durch Zeugen wurde Feuerwehr und Polizei am Samstagabend über den Brand an einem Lastwagen informie...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/HVL">HVL</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/fahndung/betrug/1263749">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_fahndung.gif"
+                                                                                    alt="Dahndung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Betrug"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/fahndung/betrug/1263749">Fahndung                             <br><strong>Betrug</strong><br>Am Samstag, gegen 12:40 Uhr betrat ein bislang unbekannter Mann ein Lebensmittelgeschäft in der Lis...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PM">PM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/carport-brennt-nieder/1263517">
+                                                            <img src="/files/images/full/72455/waldbrand_5.png"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Carport brennt nieder"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/carport-brennt-nieder/1263517">Pressemeldung                             <br><strong>Carport brennt nieder</strong><br>Aus bislang unbekannter Ursache kam es am Sonntagabend zu einem Brand in Schönwalde. Im Hof eines 9...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/HVL">HVL</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/pressemeldung/bei-unfall-verletzt/1263748">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_meldungen.gif"
+                                                                                    alt="Pressemeldung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Bei Unfall verletzt"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/pressemeldung/bei-unfall-verletzt/1263748">Pressemeldung                             <br><strong>Bei Unfall verletzt</strong><br>Als am Sonntagnachmittag eine Radfahrerin, die die Straße „Am Neuen Palais“ befuhr, auf Höhe Linden...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PDM">PDM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                            <li >
+                                            <a class="pbb-image-container pbb-image-small" href="/fahndung/raubdelikt-polizei-sucht-zeugen/1263743">
+                                                            <img src="/bundles/zdpoliwinformativ/images/placeholder/small/ph_fahndung.gif"
+                                                                                    alt="Dahndung"
+                                                                                                                            title="Der Link öffnet den gesamten Artikel: Raubdelikt- Polizei sucht Zeugen"
+                                                                        >
+                                                    </a>
+                                        <h4>
+                        <a href="/fahndung/raubdelikt-polizei-sucht-zeugen/1263743">Fahndung                             <br><strong>Raubdelikt- Polizei sucht Zeugen</strong><br>Am Freitagabend ereignete sich im Potsdamer Waldstadt Center ein Raubdelikt. Nach derzeitigen Erken...                        </a>
+                    </h4>
+                    <p>
+                                                    <span>Artikel vom 26.11.2018
+                                <br>
+                                                                    <a href="/suche/typ/Meldungen/landkreis/PDM">PDM</a>
+                                                            </span>
+                                            </p>
+                </li>
+                    </ul>
+                <ul class="pbb-atoz pbb-pagination">
+                                                            <li class="pbb-active"><a href="#">1</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/2">2</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/3">3</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/4">4</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/5">5</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/6">6</a></li>
+                                                                <li><a href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/7">7</a></li>
+                                                        <li><a class="pbb-nobg" href="https://polizei.brandenburg.de/suche/typ/Meldungen/kategorie/null/2" title="naechste">nächste Seite »</a>
+                </li>
+                    </ul>
+    </div>
+                </div>
+        <hr class="pbb-closer"/>
+        <!-- END MAIN-CONTENT-AREA -->
+</div>
+
+
+    
+    <div id="pbb-footer">
+            <div id="pbb-inner-footer">
+            <ul class="pbb-footer-ie-column-fix">
+                <li><a href="/">Startseite</a></li>
+                                                                                
+                                                                                        
+                            <li><a href="/liste/buergerservice/73511">Bürgerservice</a>
+                                                            <ul>
+                                                                            <li><a href="/onlineservice/auswahl_strafanzeige">Strafanzeige erstatten</a></li>
+                                                                            <li><a href="/liste/antragsformulare-und-ansprechpartner-zum/62400">Anträge Waffenrecht</a></li>
+                                                                            <li><a href="/standorte_und_erreichbarkeiten">Standorte &amp; Erreichbarkeiten</a></li>
+                                                                            <li><a href="/bussgeldrechner">Bußgeldrechner</a></li>
+                                                                            <li><a href="/konto/login">Blitzerfoto einsehen</a></li>
+                                                                            <li><a href="/konto/uebersicht">Benutzerkonto</a></li>
+                                                                            <li><a href="/seite/polizeiapp">Polizei-App</a></li>
+                                                                            <li><a href="/liste/polizeiliche-vorladung/420658">Polizeiliche Vorladung</a></li>
+                                                                            <li><a href="/liste/meldungen-und-hinweise-und-anzeigen/416333">Meldungen &amp; Anzeigen</a></li>
+                                                                            <li><a href="/liste/berechtigungen-und-dokumente/60405">Berechtigungen &amp; Dokumente</a></li>
+                                                                            <li><a href="/onlineservice/auswahl">Weitere Online-Services</a></li>
+                                                                            <li><a href="/liste/die-servicerufnummer-der-polizei-wenn-si/554479">Bürgertelefon</a></li>
+                                                                            <li><a href="/seite/notfall-fax-fuer-die-rufnummer-110/62327">Notfall-Fax</a></li>
+                                                                            <li><a href="/liste/die-neuesten-polizeimeldungen-auf-dem-sc/60761">RSS-Feeds</a></li>
+                                                                            <li><a href="/liste/verantwortlichkeiten-und-bestimmungen-/73520">Rechtliche Hinweise</a></li>
+                                                                            <li><a href="http://www.polizei.de/">Andere Polizeiportale </a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/liste/meldungen-und-warndienste/73508">Aktuelles</a>
+                                                            <ul>
+                                                                            <li><a href="/suche/typ/Meldungen/kategorie?reset=1">Polizeimeldungen</a></li>
+                                                                            <li><a href="/suche/typ/Termin/kategorie?reset=true">Termine für Bürger</a></li>
+                                                                            <li><a href="/liste/warnhinweise/955680">Warnhinweise</a></li>
+                                                                            <li><a href="/verkehrsmeldungen">Verkehrswarnungen</a></li>
+                                                                            <li><a href="/pegelstaende">Pegelstände für Gewässer</a></li>
+                                                                            <li><a href="/waldbrand">Waldbrandwarnungen</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/suche/typ/Fahndung/kategorie?reset=1">Fahndungen</a>
+                                                            <ul>
+                                                                            <li><a href="/suche/typ/Fahndung/kategorie/Gesuchte%20Straft%C3%A4ter?reset=1">Gesuchte Straftäter</a></li>
+                                                                            <li><a href="/suche/typ/Fahndung/kategorie/Vermisste%20Personen?reset=1">Vermisste Personen</a></li>
+                                                                            <li><a href="/suche/typ/Fahndung/kategorie/Gestohlene%20Sachen?reset=1">Gestohlene Sachen</a></li>
+                                                                            <li><a href="/suche/kategorie/Zeugen%20gesucht?type=Fahndung&amp;reset=1">Zeugen gesucht</a></li>
+                                                                            <li><a href="https://www.bka.de/SiteGlobals/Forms/Suche/Fahndungsliste_Personenfahndung_Formular.html?nn=27878">Fahndungen des BKA</a></li>
+                                                                            <li><a href="https://www.rbb-online.de/taeteropferpolizei/index.html">Täter-Opfer-Polizei</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/liste/vorbeugen-und-schuetzen/73513">Vorbeugen &amp; Schützen</a>
+                                                            <ul>
+                                                                            <li><a href="/liste/gewalt/416269">Gewalt</a></li>
+                                                                            <li><a href="/liste/opferschutz-und-opferhilfe/416272">Opferschutz &amp; Opferhilfe</a></li>
+                                                                            <li><a href="/liste/drogen-sucht-und-abhaengigkeit/416262">Sucht &amp; Drogen</a></li>
+                                                                            <li><a href="/liste/informationen-rund-um-das-thema-betrug/416294">Betrug</a></li>
+                                                                            <li><a href="/liste/neue-medien-und-internet/416300">Neue Medien &amp; Internet</a></li>
+                                                                            <li><a href="/liste/eigentums-und-diebstahlschutz/416316">Eigentum &amp; Diebstahl</a></li>
+                                                                            <li><a href="/liste/rund-um-den-strassenverkehr/416317">Straßenverkehr</a></li>
+                                                                            <li><a href="/liste/fundmunition-und-bauen-in-kampfmittelbel/59770">Fundmunition</a></li>
+                                                                            <li><a href="/liste/wenn-sie-eine-reise-ins-nachbarland-pole/62972">Auslandsreisen</a></li>
+                                                                            <li><a href="/seite/kommunale-kriminalpraevention/704116">Kommunale Kriminalprävention</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/liste/bilanzen-und-informationsmaterialien/71968">Daten &amp; Fakten</a>
+                                                            <ul>
+                                                                            <li><a href="/liste/statistiken-zur-kriminalitaetslage-im-la/71666">Statistiken zur Kriminalität</a></li>
+                                                                            <li><a href="/liste/polizeiliche-verkehrsunfallstatistiken-i/71620">Statistiken zum Straßenverkehr</a></li>
+                                                                            <li><a href="/liste/informationen-der-zentralen-bussgeldstel/59868">Verwarn- und Bußgelder</a></li>
+                                                                            <li><a href="/liste/die-mitarbeiterzeitschrift-der-polizei/71999">Polizeizeitung Info 110</a></li>
+                                                                            <li><a href="/liste/wichtige-informationsblaetter-fuer-ihre-/71736">Broschüren und Flyer</a></li>
+                                                                            <li><a href="/lexikon/">Lexikon polizeilicher Begriffe</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/liste/polizeiberuf/73514">Beruf &amp; Karriere</a>
+                                                            <ul>
+                                                                            <li><a href="/suche/typ/Pressemeldung/kategorie/Stellenausschreibungen?reset=1">Stellenausschreibungen</a></li>
+                                                                            <li><a href="/standorte_und_erreichbarkeiten?art=einstellungsberater">Einstellungsberater</a></li>
+                                                                            <li><a href="/onlineservice/bewerbung/auswahl">Bewerben für den Polizeiberuf</a></li>
+                                                                            <li><a href="/sixcms/detail.php?template=rangliste">Rangliste für Bewerber</a></li>
+                                                                            <li><a href="/liste/ausbildung-zum-polizeibeamten/60247">Ausbildung bei der Polizei</a></li>
+                                                                            <li><a href="/liste/studium-zum-polizeibeamten/60256">Studium bei der Polizei</a></li>
+                                                                            <li><a href="/liste/einblick-in-den-polizeiberuf/60185">(Schüler) Praktikum und Referendariat</a></li>
+                                                                            <li><a href="/seite/sonderprogramm-feldjaeger/230372">Sonderprogramm Feldjäger</a></li>
+                                                                            <li><a href="/seite/sportfoerdergruppe/143032">Sportfördergruppe</a></li>
+                                                                            <li><a href="http://www.fhpolbb.de/">Webseite der Fachhochschule der Polizei</a></li>
+                                                                            <li><a href="http://polizei-brandenburg-karriere.de/">Karriereportal  der Brandenburger Polizei</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                                                                        
+                            <li><a href="/liste/brandenburger-polizei/62248">Die Polizei</a>
+                                                            <ul class="pbb-footer-lastrow">
+                                                                            <li><a href="/standorte_und_erreichbarkeiten">Standorte und Erreichbarkeiten</a></li>
+                                                                            <li><a href="/liste/uebergeordnete-dienststellen-der-polizei/60738">Übergeordnete Dienststellen</a></li>
+                                                                            <li><a href="/liste/aufgaben-und-taetigkeitsfelder-der-poliz/60475">Aufgaben und Tätigkeitsfelder</a></li>
+                                                                            <li><a href="/liste/ausruestung-und-technik/62300">Ausrüstung und Technik</a></li>
+                                                                            <li><a href="/seite/laufbahnen-und-dienstgrade-in-der-brande/60153">Laufbahnen</a></li>
+                                                                            <li><a href="/liste/geschichtliches/563014">Geschichtliches</a></li>
+                                                                    </ul>
+                                                        </li>
+                        
+                                    
+                <li>
+                    <ul>
+                        <li class="pbb-footer-wBG pbb-footer-title"><a>110</a></li>
+                        <li class="pbb-footer-wBG pbb-footer-long pbb-footer-last">
+                            <a href="/seite/notfall-fax/62327">In dringenden Fällen nutzen Sie
+                                bitte den Notruf 110 oder das </a>
+                            <a href="/seite/notfall-fax/62327">Notfallfax &raquo;</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="pbb-footer-wBG pbb-footer-title"><a>Bürgertelefon</a></li>
+                        <li class="pbb-footer-wBG pbb-footer-long pbb-footer-last"><a>0700 3333 0331*<br/></a>
+                            <a href="/seite/kostenuebersicht/62330">*Kostenübersicht</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="pbb-footer-wBG pbb-footer-title">
+                            <a>Wichtige&nbsp;Links</a>
+                        </li>
+                        <li class="pbb-footer-wBG pbb-footer-long">
+                            <a href="/konto/login">Login</a>
+                        </li>
+                        <li class="pbb-footer-wBG">
+                            <a href="/seite/presse/62783">Presseanfrage</a>
+                        </li>
+                        <li class="pbb-footer-wBG">
+                            <a href="/onlineservice/kontaktaufnahme">Kontakt</a>
+                        </li>
+                        <li class="pbb-footer-wBG">
+                            <a href="/onlineservice/hilfe">Fehler&nbsp;melden</a>
+                        </li>
+                        <li class="pbb-footer-wBG">
+                            <a href="/seite/impressum/62785">Impressum</a>
+                        </li>
+                        <li class="pbb-footer-wBG pbb-footer-end">
+                            <a href="/seite/datenschutzerkl%C3%A4rung/60774">Datenschutzerklärung</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="pbb-closer"/>
+        </div>
+        <!-- END FOOTER -->
+</div>
+    
+</div>
+
+                    
+        
+        
+    
+
+
+<!-- Piwik -->
+<script type="text/javascript">//<![CDATA[
+var _paq = (_paq||[]).concat([["setVisitorCookieTimeout","Session"],["setSessionCookieTimeout","Session"],["trackSiteSearch",null,"",27273],["setVisitorCookieTimeout","Session"],["setSessionCookieTimeout","Session"],["enableLinkTracking"]]);
+
+(function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://polizei.brandenburg.de/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"js/"; s.parentNode.insertBefore(g,s);
+})();
+//]]></script>
+<!-- End Piwik Code -->
+
+
+
+<script type="text/javascript" src="/js/7fa6d99.js?v4.5" charset="utf-8" data-env="prod"></script>
+
+
+    
+    
+
+<style>    .pbb-form .pbb-note.text-red, .text-red {        color: #FF0000;    }</style><script>/*<![CDATA[*/    $(document).ready(function () {        var link = $('.six-msg-link');        link.hover(function () {            $(this).parents('div.six-msg-text:first').addClass('text-red');            $(this).prev('div.pbb-note:first').addClass('text-red');        });        link.mouseleave(function () {            $(this).parents('div.six-msg-text:first').removeClass('text-red');            $(this).prev('div.pbb-note:first').removeClass('text-red');        });    })/*]]>*/</script>
+</body>
+</html>
