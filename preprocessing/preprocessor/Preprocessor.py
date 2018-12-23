@@ -49,6 +49,12 @@ class Preprocessor:
     def stemming(self,word):
         return self.stemmer_german.stem(word)
 
+    def stemming_words(self,word_tokens):
+        stemmed_tokens = []
+        for w in word_tokens:
+            stemmed_tokens.append(self.stemmer_german.stem(w))
+        return stemmed_tokens
+
     def lemmating(self,words):
         return self.tagger.tag(words)
 
