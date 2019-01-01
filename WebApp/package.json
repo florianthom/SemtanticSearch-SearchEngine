@@ -5,7 +5,11 @@
   "main": "indexserver.js",
   "scripts": {
     "start": "node indexserver.js",
-    "server": "nodemon indexserver.js"
+
+    "client-install": "npm install --prefix client",
+    "server": "nodemon indexserver.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Florian Thom",
   "license": "MIT",
