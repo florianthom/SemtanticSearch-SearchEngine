@@ -1,0 +1,73 @@
+Router:
+    - ist Routehandler-Klasse von express
+    - auch mini-app genannt (da komplette middleware + routing geboten wird)
+
+    - alternativ zur Router-Class kann man einfach innerhalb von indexserver.js / server.js / index.js / app.js
+        die routes mit 
+                        app.get('/', function (req, res) {
+                            res.send('GET request to the homepage');
+                            }); 
+        definieren
+    - warum Router? 1. man kann route-definition aus indexserver.js nehmen
+                        -> damit viel Modularität
+                    2. mehr Einstellmöglichkeiten
+
+Klassen / Objekterstellung -> Varianten:
+    -    JavaScript objects are containers for named values called properties or methods.
+    - Objekterstellung: 
+        -> 0.1  {name: "hallo", name2: "hallo2"}                -> für 1 Objekt
+        -> 0.2  var NewObject = {};                             -> für 1 Objekt, dem man neue Eigenschaften zuweisen möchte
+                NewObject['property1'] = value;
+                NewObject['property2'] = value;
+                NewObject['method'] = function(){ /* function code here */ }
+        -> 0.3 mit function oder class (siehe unten)            -> für mehrere Objekte
+
+
+
+    1.      function User(name) {
+                this.name = name;
+            }
+            User.prototype.sayHi = function() {     
+                alert(this.name);
+            }
+            let user = new User("John");
+            user.sayHi();
+    ---> The JavaScript prototype property allows you to add new properties to object constructors:
+
+    2.      class User {
+                constructor(name) {
+                    this.name = name;
+                }
+                sayHi() {
+                    alert(this.name);
+                }
+            }
+            let user = new User("John");
+            user.sayHi();
+
+
+Without,var, let or const?
+    -> block-scoped=scope is limited to the block it was defined in aka lokale Variable
+        d.h. KANNN NICHT durch Unter-Block-Scopes wie for-loop überschrieben werden
+        d.h. nicht global
+    -> function-scope=scope is limited to the function it was defined in aka globale Variable
+        d.h. KANN durch Unter-Block-Scopes wie for-loop überschrieben werden
+        d.h. bisschen global
+
+    - without (z.B. x = 5): global Variable aka richtig global
+    - var: value can be changed later, function-scoped  
+    - let: value can be changed later, block-scope
+    - const: ist fixed aka unmutable, block-scope
+
+Modules
+    - 1 Module = eig. 1 File
+    - in JS: alle Funktionen sind private d.h. werden nicht verfügbar bei require (aka import in Java)
+        -> Funktionen müssen nach außen sichtbar gemacht werden (aka public in Java)
+        -> Wie? diese Funktionen müssen dem "exports"-Object zugewiesen werden ("exports" ist empty Objekt by default)
+    - zum Importieren: var x = require("File-Path"): var greetings = require("./greetings.js");
+    - module.exports vs exports:
+            Variable “module” is an object representing the current module.
+            It is local to each module and it is also private (only accessible from module code).
+            -> exports verweist immer auf module.exports
+            -> exports ist also ein Property des Module-Objectes,welches wiederum ein Object ist, dem
+                die verschiedenen public-Funktionen zugewiesen werden können

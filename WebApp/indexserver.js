@@ -1,6 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const pages = require("./routes/api/pages")
+const tests = require("./routes/api/tests")
+
 
 
 const app = express();
@@ -16,8 +19,13 @@ const db = require("./config/keys").mongoURI;
 // conncect to mongo
 mongoose
     .connect(db, {useNewUrlParser: true})
-    .then(() => console.log("MongoDB Connected..."))
+    .then(() => console.log("MongoDB connected..."))
     .catch(err => console.log(err));
+
+// Use routes
+app.use("/api/pages", pages)
+app.use("/api/tests", tests)
+
 
 const port = process.env.PORT || 5000;
 
