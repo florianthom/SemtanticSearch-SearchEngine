@@ -2,22 +2,20 @@ import React, {Component} from "react";
 import {Container, ListGroup, ListGroupItem, Button} from "reactstrap";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import uuid from "uuid";
+import {connect} from "react-redux";
+import {getPages} from "../actions/pageAction"
+import PropTypes from "prop-types"
+
 var date = new Date();
 
-
 class PageList extends Component{
-    state = {
-        pages: [
-            {id: uuid(), date: (date.getDay()-1).toString() + "." + (date.getMonth() + 1).toString() + "." + date.getFullYear().toString(),title: "test1",location: "test123",text: "text123",number: ["1234",""]},
 
-            {id: uuid(), date: (date.getDay()-1).toString() + "." + (date.getMonth() + 1).toString() + "." + date.getFullYear().toString(),title: "test2",location: "test123",text: "text123",number: ["1234",""]},
-
-            {id: uuid(), date: (date.getDay()-1).toString() + "." + (date.getMonth() + 1).toString() + "." + date.getFullYear().toString(),title: "test3",location: "test123",text: "text123",number: ["1234",""]}
-        ]
-    }
+componentDidMount(){
+    this.props.getPages();
+}
 
     render(){
-        const {pages} = this.state;
+        const {pages} = this.props.page
         return (
             <Container>
                 <Button 
@@ -60,4 +58,13 @@ class PageList extends Component{
     }
 }
 
-export default PageList;
+PageList.PropTypes = {
+    getPages: PropTypes.func.isRequired,
+    page: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    page: state.page
+})
+
+export default connect(mapStateToProps, {getPages})(PageList);
