@@ -2,15 +2,28 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // create Schema
-const ItemSchema = new Schema({
-    name: {
+const PageSchema = new Schema({
+    date: {
         type: String,
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
+    title: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    },
+    number: {
+        type: [String],
+        required: true
     }
 });
+var collectionName = 'crawlerdb'
 
-module.exports = Page = mongoose.model("page",ItemSchema);
+module.exports = Page = mongoose.model("page",PageSchema,collectionName);
