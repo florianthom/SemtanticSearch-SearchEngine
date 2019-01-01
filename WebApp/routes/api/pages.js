@@ -11,20 +11,7 @@ const Page = require("../../models/Page")
 router.get("/", (req, res) => {
     Page
         .find()
-        .exec(function(err, docs){
-            docs = docs.map(function(doc) {
-                var date_string = doc['date'];
-                var tokenList = date_string.split(".")
-                var date = new Date(tokenList[2], tokenList[1], tokenList[0])
-                return doc['date'] = date;
-            });
-            if(err){
-                res.json(err)
-            } else {
-                //docs.sort();
-                res.json(docs)
-            }
-        })
+        .then(pages => res.json(pages))
 
 });
 
@@ -34,13 +21,22 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     var date = new Date();
     const newPage = new Page({
-        date:  date.getDay().toString() + "." + (date.getMonth() + 1).toString() + "." + date.getFullYear().toString(),
+        date:  (date.getDay()-1).toString() + "." + (date.getMonth() + 1).toString() + "." + date.getFullYear().toString(),
         title: req.body.title,
         location: req.body.location,
         text:  req.body.text,
         number: req.body.number
     });
     newPage.save().then(item => res.json(item));
+});
+
+// @route   DELETE api/pages
+// @desc    Delete a Post
+// @access  Public
+router.delete("/:id", (req, res) => {
+   Page.findById(req.params.id)
+    .then(page => page.remove().then(() => res.json({success: true})))
+    .catch(err => res.status(404).json({success: false}))
 });
 
 module.exports = router

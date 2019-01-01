@@ -1,0 +1,23 @@
+router.get("/", (req, res) => {
+    Page
+        .find()
+        .exec(function(err, docs){
+            docs = docs.map(function(doc) {
+                var date_string = doc['date'];
+                var tokenList = date_string.split(".")
+                var date = new Date(tokenList[2], tokenList[1], tokenList[0])
+                doc.date = date;
+                return doc
+            });
+            if(err){
+                res.json(err)
+            } else {
+                res.json(docs.sort((a,b) => {
+                    var tmp_a = new Date(a.date);
+                    var tmp_b = new Date(b.date);
+                    return (tmp_a > tmp_b) ? 1 : ((tmp_b > tmp_a) ? -1 : 0)
+                }))
+            }
+        })
+
+});
