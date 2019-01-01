@@ -1,16 +1,12 @@
-Router:
-    - ist Routehandler-Klasse von express
-    - auch mini-app genannt (da komplette middleware + routing geboten wird)
-
-    - alternativ zur Router-Class kann man einfach innerhalb von indexserver.js / server.js / index.js / app.js
-        die routes mit 
-                        app.get('/', function (req, res) {
-                            res.send('GET request to the homepage');
-                            }); 
-        definieren
-    - warum Router? 1. man kann route-definition aus indexserver.js nehmen
-                        -> damit viel Modularität
-                    2. mehr Einstellmöglichkeiten
+Datatypes: (sind dynamisch d.h. 1 Variable kann x Types speichern)
+    - Strings
+    - Numbers
+    - Booleans
+    - Arrays ([])
+    - Objects
+    - function
+    - undefined (eher allgemein für 1 Variable gedacht)
+    - null (eher spezifisch für objekte gedacht)
 
 Klassen / Objekterstellung -> Varianten:
     -    JavaScript objects are containers for named values called properties or methods.
