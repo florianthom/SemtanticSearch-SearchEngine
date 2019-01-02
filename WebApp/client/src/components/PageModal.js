@@ -38,7 +38,6 @@ class PageModal extends Component {
     }
 
     onSubmit = (e) => {
-        var date = new Date();
         e.preventDefault();
         const newPage = {
             title: this.state.title,
