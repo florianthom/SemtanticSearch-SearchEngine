@@ -1,3 +1,5 @@
+//Verweis: https://reactstrap.github.io/components/navbar/
+
 import React, { Component } from "react";
 import {
     Collapse,
