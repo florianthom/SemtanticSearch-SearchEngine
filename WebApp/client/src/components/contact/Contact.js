@@ -2,11 +2,11 @@ import React from "react";
 import {Container} from "reactstrap"
 
 class Contact extends React.Component{
-    render(){
+    render() {
         return (
             <div>
                 <Container>
-                    Contact
+                    <h1>Contact</h1>  
                 </Container>
             </div>
         );

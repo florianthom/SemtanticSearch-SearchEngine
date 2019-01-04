@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Form from "./PageSearchForm";
+import PageSearchForm from "./PageSearchForm";
  
 class Home extends Component {
   render() {
     return (
         <div>
-          <Form />
+          <PageSearchForm />
         </div>
     );
   }

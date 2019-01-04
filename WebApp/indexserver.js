@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const pages = require("./routes/api/pages")
 const tests = require("./routes/api/tests")
+const searches = require("./routes/api/searches")
 
 
 
@@ -25,6 +26,7 @@ mongoose
 // Use routes
 app.use("/api/pages", pages)
 app.use("/api/tests", tests)
+app.use("/api/searches", searches)
 
 
 const port = process.env.PORT || 5000;
