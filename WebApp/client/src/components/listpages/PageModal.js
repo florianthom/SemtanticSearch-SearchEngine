@@ -19,7 +19,7 @@ import {
     Input
 } from "reactstrap";
 import {connect} from "react-redux";
-import {addPage} from "../actions/pageActions";
+import {addPage} from "../../actions/pageActions";
 
 class PageModal extends Component {
     state = {
@@ -38,7 +38,7 @@ class PageModal extends Component {
     }
 
     onSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // verhindert reload der kompletten page
         const newPage = {
             title: this.state.title,
             location: "test5",

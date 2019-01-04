@@ -1,6 +1,5 @@
 // Was passiert hier? der PageReducer stellt Methoden bereit, um den internal state zu manipulieren
 
-import uuid from "uuid";
 import {GET_PAGES, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "../actions/types";
 
 var date = new Date();
@@ -13,7 +12,12 @@ const initialState = {
 }
 
 // public methods zum manipulieren des states
-export default function(state = initialState, action){
+// state = initialState wird benötigt, da wir selbst ja nie den reducer aufrufen, aber der store schon
+// und wenn der store seinen state(store-intern) an state(parameter) übergeben möchte, aber noch 
+// keinen state hat (gerade initialisiert) wird der hier definierte initialState genommen
+// wir können eigentlich nur die action beeinflussen, die der store an den reducer übergibt, den 
+// state parameter macht er selbst
+export default function(state = initialState, action){ // diese 2 Parameter müssen genau so heißen und sind nicht optional
     switch(action.type){
         // returns the state from the store
         case GET_PAGES:

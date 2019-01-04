@@ -19,3 +19,7 @@
     opacity: 0.01;
     transition: opacity 5000ms ease-in;
 }
+
+.searchform{
+    text-align: center;
+}
