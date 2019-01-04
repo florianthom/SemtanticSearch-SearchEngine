@@ -15,6 +15,17 @@ router.get("/", (req, res) => {
 
 });
 
+// @route   GET api/pages -> warum - wir haben doch get("/") -> unser Router ist in indexserver.js so
+//                              definiert, dass nur "/api/pages" hier ankommt
+// @desc    Get all Pages
+// @access  Public
+router.get("/:id", (req, res) => {
+    Page
+        .find()
+        .then(pages => res.json(pages))
+
+});
+
 // @route   POST api/pages
 // @desc    Create a Post
 // @access  Public
