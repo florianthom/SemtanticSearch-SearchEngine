@@ -33,13 +33,33 @@ class AppNavbar extends Component{
             <div>
             <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
-                    <NavbarBrand href="/">Page - List</NavbarBrand>
+                    <NavbarBrand href="/">Reports-Search-Engine</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
+                                <NavLink href="/">
+                                    Home
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/list">
+                                    All Reports
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink href="https://github.com/FlorianTh2/SemtanticSearch-SearchEngine">
                                     Github
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/about">
+                                    About
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/contact">
+                                    Contact
                                 </NavLink>
                             </NavItem>
                         </Nav>

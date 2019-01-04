@@ -5,9 +5,15 @@
 import {GET_PAGES, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "./types";
 import axios from "axios";
 
+// es handelt sich hier eigentlich um action-creator
+// 1 action == 1 Object
+// 1 action-creator == 1 Function, die dieses Objekt erzeugt + eventuelle api-calls
+
 // to dispatch = etwas versenden
 // das erste dispatch ist ein Funktionsname
-// Basically dispatch is used as a callback which gets invoked once some async action is complete. In redux-thunk dispatch is simply a function which dispatches an action to the Redux store after, let's say, you fetch data from an api (which is asynchronous).
+// Basically dispatch is used as a callback which gets 
+// invoked once some async action is complete. 
+// In redux-thunk dispatch is simply a function which dispatches an action to the Redux store after, let's say, you fetch data from an api (which is asynchronous).
 export const getPages = () => dispatch => {
     dispatch(setPagesLoading());
     axios
