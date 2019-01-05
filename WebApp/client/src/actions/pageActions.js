@@ -18,10 +18,10 @@ export const getPages = () => dispatch => {
     dispatch(setPagesLoading());
     axios
         .get("api/pages")
-        .then(response => dispatch({
+        .then(response => {dispatch({
             type: GET_PAGES,
             payload: response.data
-        }))
+        }); console.log()})
 };
 
 // get called from the pageList.js by the delete Button

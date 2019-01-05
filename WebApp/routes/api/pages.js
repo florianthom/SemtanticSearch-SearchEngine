@@ -11,6 +11,7 @@ const Page = require("../../models/Page")
 router.get("/", (req, res) => {
     Page
         .find()
+        .limit(30)
         .then(pages => res.json(pages))
 
 });
