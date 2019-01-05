@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const pages = require("./routes/api/pages")
 const tests = require("./routes/api/tests")
 const searches = require("./routes/api/searches")
+var zerorpc = require("zerorpc");
+
 
 
 
@@ -32,3 +34,4 @@ app.use("/api/searches", searches)
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log("Server started on port " + port));
+

@@ -16,16 +16,28 @@ import {
 
 class PageSearchForm extends React.Component{
 
+    
+    // funktionen wie onSubmit oder onChange müssen eigentlich im Constructor gebindet werden
+    // da wir aber = (event) => {} haben,also eine arrow-method, machen wir das damit
     onSubmit = (event) => {
-        event.preventDefault(); // verhindert reload der kompletten page
-        console.log(this.state)
+        // muss erste Anweisung sein
+        // verhindert reload der kompletten page
+        event.preventDefault();
+        // falls man versucht console.log("hello" + this.state) zu machen return er immer hello + object
+        console.log(this.state.searchString)
         // Add page via addPage action
-        this.props.getSearchResult(this.state);
-
+        this.props.getSearchResult(this.state.searchString);
     }
 
     onChange = (event) => {
-        this.setState({[event.target.searchString]: event.target.value});
+        this.setState({
+            // [event.target.name] ist praktisch der name des <input> tags
+            // event.target.value ist sein Wert
+            // beides ist nur generisch, konkret heißt das z.B.
+            // searchString: "hallo123"
+            [event.target.name]: event.target.value  
+            
+        });
     }
 
     render(){
@@ -40,7 +52,8 @@ class PageSearchForm extends React.Component{
                                 type="text"
                                 name="searchString"
                                 placeholder="Search String"
-                                onChange={this.onChange}>
+                                onChange={this.onChange.bind(this)}
+                                >                                
                                 </Input>
 
                                 <div className="container pl-5 pr-5">

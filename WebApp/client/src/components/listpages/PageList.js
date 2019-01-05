@@ -76,6 +76,7 @@ const mapStateToProps = (state) => ({
 
     // und von diesem reducer wollen wir nur das page-prop von dem Return (=state)
 
+    // das page bei stae.page muss mit dem reducer matchen
     page: state.page
 })
 
