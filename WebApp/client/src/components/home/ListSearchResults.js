@@ -11,60 +11,31 @@ class ListSearchResults extends Component{
 
 
     render(){
-        console.log("bei render");        
-        const searchResultItem = this.props.search.map(result => (
-            <div>
-                <h3>
-                    {
-                        result.title
-                    }
-                </h3>
+            const searchResultItem = this.props.search.map(result => (
+            <ListGroupItem className="my-3">
+{/*              why id.$oid? from python we have to send json to our backend
+             due to zeroRPC or RPC in generall all Attributes have to be serializable
+             normally _id not is 123412 ect but _id = ObjectId(123412) and that is not serializable
+             so json.utils made it serializable and so _id got converted to _id.$oid */}
+            <div key={result._id.$oid}>
+                <h5>
+                    {result.title}
+                </h5>
+                <p>{result.date}</p>
+                    <p>{result.text}</p>
             </div>
+            </ListGroupItem>
         ));
-/* 
-        <div>
-        <h3>
-            
-            {results.title}
-        </h3>
-    </div> */
-
 
         return (
-            <Container>
+            <Container className="mt-5">
                 <ListGroup>
-                    <ListGroupItem>
                         {searchResultItem}
-                    </ListGroupItem>
                 </ListGroup>
             </Container>
         );
     }
 }
-
-{/* 
-                    <TransitionGroup className="page-list">
-                        {pages.map(({_id,date,title,text,number}) => (
-                            <CSSTransition key={_id} timeout={10} classNames="fade">
-                                <ListGroupItem>
-                                    <Button
-                                    className="remove-btn"
-                                    color="danger"
-                                    size="sm"
-                                    onClick={this.onDeleteClick.bind(this,_id)}> 
-
-                                    &times;
-
-                                    </Button>
-                                    {title}
-                                    <br />
-                                    {_id}
-                                </ListGroupItem>
-                            </CSSTransition>
-                        ))}
-                    </TransitionGroup>
-*/}
-
 
 
 

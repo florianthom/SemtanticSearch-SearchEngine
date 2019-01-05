@@ -37,7 +37,7 @@ class PageList extends Component{
                     <TransitionGroup className="page-list">
                         {pages.map(({_id,date,title,text,number}) => (
                             <CSSTransition key={_id} timeout={10} classNames="fade">
-                                <ListGroupItem>
+                                <ListGroupItem className="my-2">
                                     <Button
                                     className="remove-btn"
                                     color="danger"
@@ -47,9 +47,8 @@ class PageList extends Component{
                                         &times;
 
                                     </Button>
-                                    {title}
-                                    <br />
-                                    {_id}
+                                    {title} <span className="float-right">{date}</span>
+                                    
                                 </ListGroupItem>
                             </CSSTransition>
                         ))}
