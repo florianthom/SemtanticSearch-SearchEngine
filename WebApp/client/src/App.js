@@ -11,6 +11,9 @@ import Home from "./components/home/Home";
 import ListPages from "./components/listpages/ListPages";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import 'react-dates/initialize';
+
+
 
 class App extends Component {
   render() {

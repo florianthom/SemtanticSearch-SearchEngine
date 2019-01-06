@@ -20,7 +20,7 @@ export default function(state = initialState, action){
             return {
                 ...state,
                 searchString: action.searchString,
-                searchResults: [],
+                searchResults: [], // empty searchResults - storage 
                 loading: false
             }
         }

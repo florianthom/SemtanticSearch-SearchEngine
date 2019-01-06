@@ -1,0 +1,13 @@
+client@0.1.0 /home/flo/Desktop/github/SemtanticSearch-SearchEngine/WebApp/client
+├── axios@0.18.0  extraneous
+├── bootstrap@4.2.1 
+├── react@16.7.0 
+├── react-dom@16.7.0 
+├── react-is@16.7.0 
+├── react-router-dom@4.3.1  extraneous
+├── react-transition-group@2.5.2  extraneous
+├── redux@4.0.1  extraneous
+├── redux-thunk@2.3.0  extraneous
+├── scheduler@0.12.0 
+└── uuid@3.3.2 
+
