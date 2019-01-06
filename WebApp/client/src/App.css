@@ -23,3 +23,13 @@
 .searchform{
     text-align: center;
 }
+
+.DateRangePicker *, .SingleDatePicker *, .DayPickerRangeController * {
+    box-sizing: border-box;
+    padding: 100;
+
+  }
+
+  body {
+    background: #efefef;
+  }
