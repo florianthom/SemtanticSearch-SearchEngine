@@ -15,20 +15,30 @@ class GetSearchResultsRPC():
         
     def get_results(self, searchString,dateFROM,dateTO):
         print(searchString) # e.g. halloIch bin ein Suchstring
-        # data muss eine liste sein (kann geändert werden, erfordert aber eine Änderung im Backend)
-        data = list(collectionMongo.find({}).limit(5))#[random.randint(0, 10)]]
-        print(data)
         print(dateFROM) # e.g. Tue Jan 08 2019 12:00:00 GMT+0100 (Central European Standard Time) # wenn nicht vorhanden: None
         print(dateTO) # e.g. Tue Jan 08 2019 12:00:00 GMT+0100 (Central European Standard Time)
+        
+        
+        
+        # data muss eine liste / Array sein (kann geändert werden, erfordert aber eine Änderung im Backend)
+        data = list(collectionMongo.find({}).limit(5))#[random.randint(0, 10)]]
+        print(data)
+        
+        
+        
+        
+        
+        
         # der return sollte vielleicht auf maximal 20 Elemente beschränkt sein
-        if(dateFROM == None):
-            print("dateFROM is none")
         return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
 
 
 def main():
-    s = zerorpc.Server(GetSearchResultsRPC())
-    s.bind("tcp://*:4242")
-    s.run()
+    searchClass1 = GetSearchResultsRPC()
+    searchClass1.get_results("mein Such String", "Tue Jan 08 2019 12:00:00 GMT+0100", "Tue Jan 09 2019 12:00:00 GMT+0100")
+
+    #s = zerorpc.Server(GetSearchResultsRPC())
+    #s.bind("tcp://*:4242")
+    #s.run()
 
 if __name__ == "__main__" : main()
