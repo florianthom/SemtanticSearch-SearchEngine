@@ -31,6 +31,8 @@ class PageSearchForm extends React.Component{
     constructor(){
         super();
         this.state = {
+        
+        // seachStringTotal={searchString, date}
         searchString: "",
         startDate: null,
         endDate: null,
@@ -49,13 +51,17 @@ class PageSearchForm extends React.Component{
 
         if(this.state.startDate && this.state.endDate && this.state.startDate.toDate() < this.state.endDate.toDate())
         {
-            this.props.getSearchResult(this.state.searchString);
-            // hier muss noch das Date mit rein
+            console.log("start date größer als end-Date");
         }
-        else{
-            this.props.getSearchResult(this.state.searchString);
+        var payload = {
+            searchString: this.state.searchString ? this.state.searchString : null,
+            dateFROM: this.state.startDate ? this.state.startDate.toDate().toString() : null,
+            dateTO: this.state.endDate ? this.state.endDate.toDate().toString() : null
+        }
+        console.log(payload)
+        this.props.getSearchResult(payload);
+        
 
-        }
         
     }
 
