@@ -18,7 +18,6 @@ export default function(state = initialState, action){
                 loading: false
             };}
         else{
-            console.log("lol");
             return {
                 ...state,
                 searchString: action.searchString,
