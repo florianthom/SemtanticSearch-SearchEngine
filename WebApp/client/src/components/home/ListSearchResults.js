@@ -11,22 +11,25 @@ class ListSearchResults extends Component{
 
 
     render(){
+        if(!this.props.search){
+            return null;
+        }
             const searchResultItem = this.props.search.map(result => (
-            <ListGroupItem className="my-3">
-{/*              why id.$oid? from python we have to send json to our backend
-             due to zeroRPC or RPC in generall all Attributes have to be serializable
-             normally _id not is 123412 ect but _id = ObjectId(123412) and that is not serializable
-             so json.utils made it serializable and so _id got converted to _id.$oid */}
-            <div key={result._id.$oid}>
-                <h5>
-                    {result.title}
-                </h5>
-                <p>{result.date}</p>
-                <p>Fallnummer: {result.number.map(number => (<span>{number} </span>))}, Ort: {result.location}</p>
-
-                    <p>{result.text}</p>
-            </div>
-            </ListGroupItem>
+                <ListGroupItem className="my-3" key={result._id.$oid}>
+                {/*              why id.$oid? from python we have to send json to our backend
+                             due to zeroRPC or RPC in generall all Attributes have to be serializable
+                             normally _id not is 123412 ect but _id = ObjectId(123412) and that is not serializable
+                             so json.utils made it serializable and so _id got converted to _id.$oid */}
+                            <div key={result._id.$oid}>
+                                <h5>
+                                    {result.title}
+                                </h5>
+                                <p>{result.date}</p>
+{                                <p>Fallnummer: {result.number.map(number => (<span key={number}>{number} </span>))}, Ort: {result.location}</p>
+}                
+                                    <p>{result.text}</p>
+                            </div>
+                            </ListGroupItem>
         ));
 
         return (

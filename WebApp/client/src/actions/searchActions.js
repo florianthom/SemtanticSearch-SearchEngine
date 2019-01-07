@@ -1,14 +1,24 @@
 import {GET_SEARCH_RESULT_WITH_GIVEN_SEARCHSTRING,SEARCH_RESULTS_LOADING} from "./types";
 import axios from "axios";
 
-export const getSearchResult = (searchString) => dispatch => {
+export const getSearchResult = (searchStringWithDate) => dispatch => {
     dispatch(setSearchResultsLoading());
-    if(searchString)
-{    axios
-        .get(`/api/searches/${searchString}`)
+    if(searchStringWithDate.searchString || (searchStringWithDate.dateFROM && searchStringWithDate.dateTO))
+{    
+    console.log("lll");
+    console.log(searchStringWithDate);
+    
+    axios
+        .get("/api/searches", {params: {
+            searchString: searchStringWithDate.searchString,
+            dateFROM: searchStringWithDate.dateFROM,
+            dateTO: searchStringWithDate.dateTO
+        }})
         .then(response => {dispatch({
             type: GET_SEARCH_RESULT_WITH_GIVEN_SEARCHSTRING,
-            searchString: searchString,
+            searchString: searchStringWithDate.searchString,
+            dateFROM: searchStringWithDate.dateFROM,
+            dateTO: searchStringWithDate.dateTO,
             payload: response.data
         }); console.log();
     })}
@@ -16,8 +26,7 @@ export const getSearchResult = (searchString) => dispatch => {
         console.log("hiiiieeerrr");
         var returnStatement = {
             type: GET_SEARCH_RESULT_WITH_GIVEN_SEARCHSTRING,
-            searchString: searchString,
-            payload: {nothing: "nothing"}
+            searchString: searchStringWithDate,
         };
         dispatch(returnStatement);
     }

@@ -15,12 +15,19 @@ client.connect("tcp://127.0.0.1:4242");
 //                              definiert, dass nur "/api/pages" hier ankommt
 // @desc    Retrieve Search-Results
 // @access  Public
-router.get("/:searchString", (req, res) => {
-    console.log(req.params.searchString)
+router.get("/", (req, res) => { ///:dateFROM/:dateTO
+    console.log("in backend")
+    console.log(req.query.searchString);
+    console.log(req.query.dateFROM);
+    console.log(req.query.dateTO);
 
     
-    client.invoke("get_results",req.params.searchString, function(error, reply, streaming) {
-        res.json(JSON.parse(reply));
+    client.invoke("get_results",
+        req.query.searchString,
+        req.query.dateFROM,
+        req.query.dateTO,
+        function(error, reply, streaming) {
+            res.json(JSON.parse(reply));
     });
 
 

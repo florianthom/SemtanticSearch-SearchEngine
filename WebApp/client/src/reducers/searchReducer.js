@@ -8,10 +8,12 @@ const initialState = {
 export default function(state = initialState, action){ 
     switch(action.type){
         case GET_SEARCH_RESULT_WITH_GIVEN_SEARCHSTRING:
-        if(action.searchString){
+        if(action.searchString || (action.dateFROM && action.dateTO)){
             return {
                 ...state,
                 searchString: action.searchString,
+                dateFROM: action.dateFROM,
+                dateTO: action.dateTO,
                 searchResults: action.payload,
                 loading: false
             };}
@@ -20,6 +22,8 @@ export default function(state = initialState, action){
             return {
                 ...state,
                 searchString: action.searchString,
+                dateFROM: action.dateFROM,
+                dateTO: action.dateTO,
                 searchResults: [], // empty searchResults - storage 
                 loading: false
             }
