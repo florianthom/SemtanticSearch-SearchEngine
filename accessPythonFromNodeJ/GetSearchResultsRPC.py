@@ -34,11 +34,8 @@ class GetSearchResultsRPC():
 
 
 def main():
-    searchClass1 = GetSearchResultsRPC()
-    searchClass1.get_results("mein Such String", "Tue Jan 08 2019 12:00:00 GMT+0100", "Tue Jan 09 2019 12:00:00 GMT+0100")
-
-    #s = zerorpc.Server(GetSearchResultsRPC())
-    #s.bind("tcp://*:4242")
-    #s.run()
+    s = zerorpc.Server(GetSearchResultsRPC())
+    s.bind("tcp://*:4242")
+    s.run()
 
 if __name__ == "__main__" : main()
