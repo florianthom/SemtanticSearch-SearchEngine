@@ -22,21 +22,12 @@ class Preprocessor:
             self.tagger = pickle.load(f)
         self.stop_words = stopwords.words('german')
 
-        self.umlaute_dict = {
-            '\xc3\xa4': 'ae',  # U+00E4	   \xc3\xa4
-            '\xc3\xb6': 'oe',  # U+00F6	   \xc3\xb6
-            '\xc3\xbc': 'ue',  # U+00FC	   \xc3\xbc
-            '\xc3\x84': 'Ae',  # U+00C4	   \xc3\x84
-            '\xc3\x96': 'Oe',  # U+00D6	   \xc3\x96
-            '\xc3\x9c': 'Ue',  # U+00DC	   \xc3\x9c
-            '\xc3\x9f': 'ss',  # U+00DF	   \xc3\x9f
-        }
-
-    def replace_german_umlaute(self,unicode_string):
-        utf8_string = unicode_string.encode('utf-8')
-        for k in self.umlaute_dict.keys():
-            utf8_string = utf8_string.replace(k, self.umlaute_dict[k])
-        return utf8_string.decode()
+    def replace_german_umlaute(self,string_text):
+        chars = {'ö':'oe','Ö':'Oe','Ä':'Ae','ä':'ae','Ü':'Ue','ü':'ue','ß':'ss'} # usw.
+        for char in chars:
+            string_text = string_text.replace(char,chars[char])
+        return string_text
+     
 
     def tokenizing_with_sw_and_punc(self,text):
         text = text.lower()
@@ -55,7 +46,8 @@ class Preprocessor:
         for w in word_tokens:
             if w not in self.stop_words:#
                 #str(self.replace_german_umlaute(w))
-                filtered_sentence.append(w)
+                #filtered_sentence.append(w)
+                filtered_sentence.append(self.replace_german_umlaute(w))
         filtered_word_tokens = filtered_sentence
         return filtered_word_tokens
 
