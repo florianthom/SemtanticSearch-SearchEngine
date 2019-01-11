@@ -6,6 +6,7 @@ import random
 
 
 
+
 class GetSearchResultsRPC():
 
     def __init__(self):
@@ -24,9 +25,7 @@ class GetSearchResultsRPC():
         data = list(collectionMongo.find({}).limit(5))#[random.randint(0, 10)]]
         print(data)
         
-        
-        
-        
+
         
         
         # der return sollte vielleicht auf maximal 20 Elemente beschränkt sein
