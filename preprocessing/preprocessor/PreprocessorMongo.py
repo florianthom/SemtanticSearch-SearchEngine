@@ -9,7 +9,9 @@ MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
 MONGODB_DB = "crawlerdb_BACKUP"
 MONGODB_COLLECTION = "crawlerdb_BACKUP"
+
 MONGODB_COLLECTION_TOKENIZING = "crawlerdb_tokenization"
+MONGODB_COLLECTION_STEMMING = "crawlerdb_stemming"
 
 preprocessor = Preprocessor.Preprocessor()
 
@@ -18,8 +20,21 @@ preprocessor = Preprocessor.Preprocessor()
 connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
 db = connection[MONGODB_DB]
 collection = db[MONGODB_COLLECTION]
+collection_stemm = db[MONGODB_COLLECTION_STEMMING]
+collection_token = db[MONGODB_COLLECTION_TOKENIZING]
 
 preprocessor = Preprocessor.Preprocessor()
+
+
+def remove_double_records(listObj):
+    x = []
+    n = []
+    for e in listObj:
+        if e not in x:
+            n.append(e)
+            x.append(e)
+    return n
+
 
 ########## ROHDATEN ##########
 ''' 
@@ -68,10 +83,19 @@ jsonobjStemming = {
     "stemming_title": { "stemming_title_words": [], },
     }
 
+jsonobjTokenizing = {
+    "number": "",
+    "token_text": { "token_text_words": [], },
+    "token_title": { "token_title_words": [], },
+    }
+
 mylistStemm = []
-data={}
+mylistToken = []
+dataToken={}
+dataStemm={}
 i=0
 g=0
+l=[]
 for doc in collection.find():
     g=g+1
     if "_id" in doc and "number" in doc and "text" in doc and "title" in doc:
@@ -82,17 +106,26 @@ for doc in collection.find():
         number=numbertoken.group()
         token_text = preprocessor.tokenizing_complete(doc["text"])
         token_title = preprocessor.tokenizing_complete(doc["title"])
-        token_text = preprocessor.stemming_words(token_text)
-        token_title = preprocessor.stemming_words(token_title)
+        stemm_text = preprocessor.stemming_words(token_text)
+        stemm_title = preprocessor.stemming_words(token_title)
 
         #jsonobjStemming.append(dict(number=numbertoken.group))
         #jsonobjStemming["stemming_text"]["stemming_text_words"].append(token_text)
         #jsonobjStemming["stemming_title"]["stemming_title_words"].append(token_title)
-        data["number"]=number
-        data["stemming_text"] = token_text
-        data["stemming_title"] = token_title
-        jsonobjready = data
-        mylistStemm.append(jsonobjready)
+        dataToken["number"]=number
+        dataToken["token_text"] = token_text
+        dataToken["token_title"] = token_title
+        jsonobjreadyToken = dataToken
+        mylistToken.append(jsonobjreadyToken)
+
+        dataStemm["number"]=number
+        dataStemm["token_text"] = stemm_text
+        dataStemm["token_title"] = stemm_title
+        jsonobjreadyStemm = dataToken
+        mylistStemm.append(jsonobjreadyStemm)
+
+
+        l.append(number)
     #print(i)
     #print(doc)
     x = doc
@@ -110,7 +143,23 @@ for doc in collection.find():
 print("records = " + str(g))
 print("records with id and number = " + str(i))
 #print(jsonobjStemming)
-print(mylistStemm[0:5])
+print(mylistStemm[0:15])
+print(len(mylistStemm))
+
+withoutDoubleData = remove_double_records(mylistStemm)
+print(len(withoutDoubleData))
+print(len(remove_double_records(l)))
+print(len(l))
+
+
+ww = collection_token.insert_many(mylistToken)
+#print list of the _id values of the inserted documents:
+print(ww.inserted_ids)
+
+qq = collection_stemm.insert_many(mylistStemm)
+#print list of the _id values of the inserted documents:
+print(qq.inserted_ids)
+
 
 '''
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -157,3 +206,4 @@ jsonobj = {
 jsobj["a"]["b"]["e"].append({"f":var3, "g":var4, "h":var5})
 jsobj["a"]["b"]["e"].append({"f":var6, "g":var7, "h":var8})
 '''
+
