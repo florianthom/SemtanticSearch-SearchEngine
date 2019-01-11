@@ -96,6 +96,10 @@ dataStemm={}
 i=0
 g=0
 l=[]
+
+collection_stemm.drop()
+collection_token.drop()
+
 for doc in collection.find():
     g=g+1
     if "_id" in doc and "number" in doc and "text" in doc and "title" in doc:
@@ -116,12 +120,25 @@ for doc in collection.find():
         dataToken["token_text"] = token_text
         dataToken["token_title"] = token_title
         jsonobjreadyToken = dataToken
+        try:
+            collection_token.insert(jsonobjreadyToken)
+        except Exception as exception:
+        # Output unexpected Exceptions.
+            print("find an dublicate")
+            #Logging.log_exception(exception, False)
+        
         mylistToken.append(jsonobjreadyToken)
 
         dataStemm["number"]=number
         dataStemm["token_text"] = stemm_text
         dataStemm["token_title"] = stemm_title
         jsonobjreadyStemm = dataToken
+        try:
+            collection_stemm.insert(jsonobjreadyStemm)
+        except Exception as exception:
+            print("find an dublicate")
+            #Logging.log_exception(exception, False)
+
         mylistStemm.append(jsonobjreadyStemm)
 
 
@@ -152,13 +169,21 @@ print(len(remove_double_records(l)))
 print(len(l))
 
 
-ww = collection_token.insert_many(mylistToken)
+#ww = collection_token.insert_many(mylistToken)
 #print list of the _id values of the inserted documents:
-print(ww.inserted_ids)
+#print(ww.inserted_ids)
 
-qq = collection_stemm.insert_many(mylistStemm)
+#qq = collection_stemm.insert_many(mylistStemm)
 #print list of the _id values of the inserted documents:
-print(qq.inserted_ids)
+#print(qq.inserted_ids)
+
+for doc in collection_stemm.find():
+    g=g+1
+print("colelction_stemm length = ",str(g))
+
+for doc in collection_token.find():
+    g=g+1
+print("colelction_token length = ",str(g))
 
 
 '''
