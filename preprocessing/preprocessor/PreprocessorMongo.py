@@ -13,6 +13,10 @@ MONGODB_COLLECTION = "crawlerdb_BACKUP"
 MONGODB_COLLECTION_TOKENIZING = "crawlerdb_tokenization"
 MONGODB_COLLECTION_STEMMING = "crawlerdb_stemming"
 
+MONGODB_COLLECTION_WITHSW = "crawlerdb_with_stopwords"
+MONGODB_COLLECTION_WITHOUTSW = "crawlerdb_without_stopwords"
+
+
 preprocessor = Preprocessor.Preprocessor()
 
 
@@ -22,6 +26,10 @@ db = connection[MONGODB_DB]
 collection = db[MONGODB_COLLECTION]
 collection_stemm = db[MONGODB_COLLECTION_STEMMING]
 collection_token = db[MONGODB_COLLECTION_TOKENIZING]
+
+collection_with_stopwords = db[MONGODB_COLLECTION_WITHSW]
+collection_without_stopwords =db[MONGODB_COLLECTION_WITHOUTSW]
+
 
 preprocessor = Preprocessor.Preprocessor()
 
@@ -91,8 +99,12 @@ jsonobjTokenizing = {
 
 mylistStemm = []
 mylistToken = []
+
 dataToken={}
 dataStemm={}
+dataPunc={}
+dataPuncSW={}
+
 i=0
 g=0
 l=[]
@@ -108,14 +120,10 @@ for doc in collection.find():
         numbertoken = re.search("[0-9]+", numberstring)
         #print(numbertoken.group())
         number=numbertoken.group()
+
+        ###### REMOVING PUNCTIONAL AND STOPWORDS AND MAKE TOKENS ############
         token_text = preprocessor.tokenizing_complete(doc["text"])
         token_title = preprocessor.tokenizing_complete(doc["title"])
-        stemm_text = preprocessor.stemming_words(token_text)
-        stemm_title = preprocessor.stemming_words(token_title)
-
-        #jsonobjStemming.append(dict(number=numbertoken.group))
-        #jsonobjStemming["stemming_text"]["stemming_text_words"].append(token_text)
-        #jsonobjStemming["stemming_title"]["stemming_title_words"].append(token_title)
         dataToken["number"]=number
         dataToken["token_text"] = token_text
         dataToken["token_title"] = token_title
@@ -124,25 +132,52 @@ for doc in collection.find():
             collection_token.insert(jsonobjreadyToken)
         except Exception as exception:
         # Output unexpected Exceptions.
-            print("find an dublicate")
+            print("find an dublicate in TOKEN_Collection")
             #Logging.log_exception(exception, False)
         
-        mylistToken.append(jsonobjreadyToken)
-
+        #mylistToken.append(jsonobjreadyToken)
+        ############ STEMMING THE TOKENS ################
+        stemm_text = preprocessor.stemming_words(token_text)
+        stemm_title = preprocessor.stemming_words(token_title)
         dataStemm["number"]=number
         dataStemm["token_text"] = stemm_text
         dataStemm["token_title"] = stemm_title
-        jsonobjreadyStemm = dataToken
+        jsonobjreadyStemm = dataStemm
         try:
             collection_stemm.insert(jsonobjreadyStemm)
         except Exception as exception:
-            print("find an dublicate")
+            print("find an dublicate in STEMM_Collection")
             #Logging.log_exception(exception, False)
 
-        mylistStemm.append(jsonobjreadyStemm)
+        ###### REMOVING PUNCTIONAL ############
+        puncremove_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc(doc["text"]))
+        puncremove_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc(doc["title"]))
+        dataPunc["number"] = number
+        dataPunc["title"] = puncremove_title
+        dataPunc["text"] = puncremove_text
+        jsonobjreadyPunc = dataPunc
+        try:
+            collection_with_stopwords.insert(jsonobjreadyPunc)
+        except Exception as exception:
+            print("find an dublicate in PUNCREMOVE_Collection")
+            #Logging.log_exception(exception, False)
 
+        ###### REMOVING PUNCTIONAL AND STOPWORDS ############
+        punc_sw_remove_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_complete(doc["text"]))
+        punc_sw_remove_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_complete(doc["title"]))
+        dataPuncSW["number"] = number
+        dataPuncSW["title"] = punc_sw_remove_title
+        dataPuncSW["text"] = punc_sw_remove_text
+        jsonobjreadyPuncSw = dataPuncSW
+        try:
+            collection_without_stopwords.insert(jsonobjreadyPuncSw)
+        except Exception as exception:
+            print("find an dublicate in PUNCREMOVE_Collection")
+            #Logging.log_exception(exception, False)
 
+        #mylistStemm.append(jsonobjreadyStemm)
         l.append(number)
+
     #print(i)
     #print(doc)
     x = doc
@@ -157,6 +192,8 @@ for doc in collection.find():
     #token_number = x['number']
     #thisdict =	dict(number=token_number, title=token_title, text=token_text)
     #print(thisdict)
+
+    
 print("records = " + str(g))
 print("records with id and number = " + str(i))
 #print(jsonobjStemming)

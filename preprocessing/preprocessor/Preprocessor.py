@@ -30,13 +30,13 @@ class Preprocessor:
      
 
     def tokenizing_with_sw_and_punc(self,text):
-        text = text.lower()
+        text = self.replace_german_umlaute(text.lower())
         # tokenize text 
         return word_tokenize(text)
-        
+
     def tokenizing_without_punc(self,text):
         tokenizer = RegexpTokenizer(r'\w+')
-        return tokenizer.tokenize(text)
+        return tokenizer.tokenize(self.replace_german_umlaute(text))
 
     def tokenizing_complete(self,text):
         tokenizer = RegexpTokenizer(r'\w+')
