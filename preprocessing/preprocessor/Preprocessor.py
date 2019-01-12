@@ -2,15 +2,21 @@ import random
 import pickle
 
 import nltk
+
 from nltk.stem import SnowballStemmer
-from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
+
+
+
 
 from pymongo import MongoClient
 import json
 from bson import json_util
+
+
 
 from ClassifierBasedGermanTagger.ClassifierBasedGermanTagger import ClassifierBasedGermanTagger
 
@@ -21,6 +27,7 @@ class Preprocessor:
         #Lade den neuen alten Tagger in eine neue Instanz
             self.tagger = pickle.load(f)
         self.stop_words = stopwords.words('german')
+       
 
     def replace_german_umlaute(self,string_text):
         chars = {'ö':'oe','Ö':'Oe','Ä':'Ae','ä':'ae','Ü':'Ue','ü':'ue','ß':'ss'} # usw.
@@ -36,11 +43,11 @@ class Preprocessor:
 
     def tokenizing_without_punc(self,text):
         tokenizer = RegexpTokenizer(r'\w+')
-        return tokenizer.tokenize(self.replace_german_umlaute(text))
+        return tokenizer.tokenize(self.replace_german_umlaute(text.lower()))
 
     def tokenizing_complete(self,text):
         tokenizer = RegexpTokenizer(r'\w+')
-        word_tokens = tokenizer.tokenize(text)
+        word_tokens = tokenizer.tokenize(text.lower())
         filtered_sentence = [w for w in word_tokens if not w in self.stop_words]
         filtered_sentence = []
         for w in word_tokens:
@@ -53,7 +60,7 @@ class Preprocessor:
 
 
     def tokenizing_reverse(self,words):
-        return nltk.Text(words)
+        return ' '.join(words)#nltk.Text(words)
 
     def stemming(self,word):
         return self.stemmer_german.stem(word)
