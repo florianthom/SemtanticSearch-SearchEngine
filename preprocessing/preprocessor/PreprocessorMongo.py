@@ -7,26 +7,25 @@ import re
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "crawlerdb_BACKUP"
-MONGODB_COLLECTION = "crawlerdb_BACKUP"
-
-MONGODB_COLLECTION_TOKENIZING = "crawlerdb_tokenization"
-MONGODB_COLLECTION_STEMMING = "crawlerdb_stemming"
-
-MONGODB_COLLECTION_WITHSW = "crawlerdb_with_stopwords"
-MONGODB_COLLECTION_WITHOUTSW = "crawlerdb_without_stopwords"
 
 
 preprocessor = Preprocessor.Preprocessor()
 
-
-
 connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
+MONGODB_DB = "crawlerdb_BACKUP"
 db = connection[MONGODB_DB]
+
+MONGODB_COLLECTION = "crawlerdb_BACKUP"
 collection = db[MONGODB_COLLECTION]
+
+MONGODB_COLLECTION_TOKENIZING = "crawlerdb_tokenization"
+MONGODB_COLLECTION_STEMMING = "crawlerdb_stemming"
 collection_stemm = db[MONGODB_COLLECTION_STEMMING]
 collection_token = db[MONGODB_COLLECTION_TOKENIZING]
 
+
+MONGODB_COLLECTION_WITHSW = "crawlerdb_withSW"
+MONGODB_COLLECTION_WITHOUTSW = "crawlerdb_withoutSW"
 collection_with_stopwords = db[MONGODB_COLLECTION_WITHSW]
 collection_without_stopwords =db[MONGODB_COLLECTION_WITHOUTSW]
 
@@ -109,8 +108,8 @@ i=0
 g=0
 l=[]
 
-collection_stemm.drop()
-collection_token.drop()
+#collection_stemm.drop()
+#collection_token.drop()
 
 for doc in collection.find():
     g=g+1
@@ -120,7 +119,7 @@ for doc in collection.find():
         numbertoken = re.search("[0-9]+", numberstring)
         #print(numbertoken.group())
         number=numbertoken.group()
-
+        
         ###### REMOVING PUNCTIONAL AND STOPWORDS AND MAKE TOKENS ############
         token_text = preprocessor.tokenizing_complete(doc["text"])
         token_title = preprocessor.tokenizing_complete(doc["title"])
@@ -148,7 +147,7 @@ for doc in collection.find():
         except Exception as exception:
             print("find an dublicate in STEMM_Collection")
             #Logging.log_exception(exception, False)
-
+        
         ###### REMOVING PUNCTIONAL ############
         puncremove_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc(doc["text"]))
         puncremove_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc(doc["title"]))
@@ -157,11 +156,11 @@ for doc in collection.find():
         dataPunc["text"] = puncremove_text
         jsonobjreadyPunc = dataPunc
         try:
-            collection_with_stopwords.insert(jsonobjreadyPunc)
+            collection_with_stopwords.insert(jsonobjreadyPunc)    
         except Exception as exception:
             print("find an dublicate in PUNCREMOVE_Collection")
             #Logging.log_exception(exception, False)
-
+        
         ###### REMOVING PUNCTIONAL AND STOPWORDS ############
         punc_sw_remove_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_complete(doc["text"]))
         punc_sw_remove_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_complete(doc["title"]))
@@ -169,12 +168,13 @@ for doc in collection.find():
         dataPuncSW["title"] = punc_sw_remove_title
         dataPuncSW["text"] = punc_sw_remove_text
         jsonobjreadyPuncSw = dataPuncSW
+              
         try:
-            collection_without_stopwords.insert(jsonobjreadyPuncSw)
+            collection_without_stopwords.insert(jsonobjreadyPuncSw)    
         except Exception as exception:
-            print("find an dublicate in PUNCREMOVE_Collection")
+            print("find an dublicate in PUNC_AND_SW_REMOVE_Collection")
             #Logging.log_exception(exception, False)
-
+        
         #mylistStemm.append(jsonobjreadyStemm)
         l.append(number)
 
@@ -193,7 +193,7 @@ for doc in collection.find():
     #thisdict =	dict(number=token_number, title=token_title, text=token_text)
     #print(thisdict)
 
-    
+
 print("records = " + str(g))
 print("records with id and number = " + str(i))
 #print(jsonobjStemming)
@@ -222,6 +222,13 @@ for doc in collection_token.find():
     g=g+1
 print("colelction_token length = ",str(g))
 
+for doc in collection_with_stopwords.find():
+    g=g+1
+print("colelction_with_SW  length = ",str(g))
+
+for doc in collection_without_stopwords.find():
+    g=g+1
+print("colelction_withoutSW length = ",str(g))
 
 '''
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
