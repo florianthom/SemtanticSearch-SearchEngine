@@ -83,7 +83,7 @@ class Search():
         for a in range(len(less_document_actually)):
             less_documents.append(less_document_actually[a].toarray().reshape(-1))
         print("We have the following number of important selected documents for example from inverse index: ", len(less_documents))
-        print("We have ",less_documents[0].size, " diffrent words")
+
 
         # speichern der cos-sim-results
         cos_sim_results = list()
