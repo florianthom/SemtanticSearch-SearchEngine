@@ -25,8 +25,8 @@ class ListSearchResults extends Component{
                                     {result.title}
                                 </h5>
                                 <p>{result.date}</p>
-{                                <p>Fallnummer: {result.number.map(number => (<span key={number}>{number} </span>))}, Ort: {result.location}</p>
-}                
+                                {/* <p>Fallnummer: {result.number.map(number => (<span key={number}>{number} </span>))}, Ort: {result.location}</p>*/}
+                                <p>Fallnummer: {result.number}, Ort: {result.location}</p>
                                     <p>{result.text}</p>
                             </div>
                             </ListGroupItem>

@@ -3,6 +3,7 @@ from pymongo import MongoClient
 import json
 from bson import json_util
 import random
+from SearchModule import Search
 
 
 
@@ -11,8 +12,9 @@ class GetSearchResultsRPC():
 
     def __init__(self):
         global collectionMongo 
-        collectionMongo = MongoClient("127.0.0.1:27017").crawlerdb.crawlerdb
-
+        databaseMongo = MongoClient("127.0.0.1:27017").crawlerdb_WORK_TFIDF_2
+        global search
+        search = Search(databaseMongo)
         
     def get_results(self, searchString,dateFROM,dateTO):
         print(searchString) # e.g. halloIch bin ein Suchstring
@@ -22,7 +24,7 @@ class GetSearchResultsRPC():
         
         
         # data muss eine liste / Array sein (kann geändert werden, erfordert aber eine Änderung im Backend)
-        data = list(collectionMongo.find({}).limit(5))#[random.randint(0, 10)]]
+        data = search.get_search_results(searchString)
         print(data)
         
 
