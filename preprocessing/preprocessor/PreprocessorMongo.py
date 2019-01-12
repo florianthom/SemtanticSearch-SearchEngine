@@ -29,6 +29,11 @@ MONGODB_COLLECTION_WITHOUTSW = "crawlerdb_withoutSW"
 collection_with_stopwords = db[MONGODB_COLLECTION_WITHSW]
 collection_without_stopwords =db[MONGODB_COLLECTION_WITHOUTSW]
 
+MONGODB_COLLECTION_WITHOUTSW_WITHUMLAUTE = "crawlerdb_withUmlaute_withoutSW"
+collection_without_stopwords_with_umlaute = db[MONGODB_COLLECTION_WITHOUTSW_WITHUMLAUTE]
+
+MONGODB_COLLECTION_WITHSW_WITHUMLAUTE = "crawlerdb_withUmlaute_withSW"
+collection_with_stopwords_with_umlaute = db[MONGODB_COLLECTION_WITHSW_WITHUMLAUTE]
 
 preprocessor = Preprocessor.Preprocessor()
 
@@ -173,6 +178,34 @@ for doc in collection.find():
             collection_without_stopwords.insert(jsonobjreadyPuncSw)    
         except Exception as exception:
             print("find an dublicate in PUNC_AND_SW_REMOVE_Collection")
+            #Logging.log_exception(exception, False)
+
+        ###### WITH UMLAUT BUT REMOVING PUNCTIONAL ############
+        puncremove_umlaute_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc_with_umlaute_sw(doc["text"]))
+        puncremove_umlaute_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc_with_umlaute_sw(doc["title"]))
+        dataPunc["number"] = number
+        dataPunc["title"] = puncremove_umlaute_title
+        dataPunc["text"] = puncremove_umlaute_text
+        jsonobjreadyPunc = dataPunc
+        try:
+            
+            collection_with_stopwords_with_umlaute.insert(jsonobjreadyPunc)    
+        except Exception as exception:
+            print("find an dublicate in WITH_UMLAUTE_AND_SW_WITHOUT_PUNCREMOVE_Collection")
+            #Logging.log_exception(exception, False)
+        
+        ###### WITH UMLAUT BUT REMOVING PUNCTIONAL AND STOPWORDS  ############
+        punc_sw_umlaute_text = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc_and_sw_with_umlaute(doc["text"]))
+        punc_sw_umlaute_title = preprocessor.tokenizing_reverse(preprocessor.tokenizing_without_punc_and_sw_with_umlaute(doc["title"]))
+        dataPuncSW["number"] = number
+        dataPuncSW["title"] = punc_sw_umlaute_title
+        dataPuncSW["text"] = punc_sw_umlaute_text
+        jsonobjreadyPuncSw = dataPuncSW
+              
+        try:
+            collection_without_stopwords_with_umlaute.insert(jsonobjreadyPuncSw)    
+        except Exception as exception:
+            print("find an dublicate in WITH_UMLAUTE_WITHOUT_PUNC_AND_SW_REMOVE_Collection")
             #Logging.log_exception(exception, False)
         
         #mylistStemm.append(jsonobjreadyStemm)

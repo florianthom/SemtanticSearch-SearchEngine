@@ -45,6 +45,26 @@ class Preprocessor:
         tokenizer = RegexpTokenizer(r'\w+')
         return tokenizer.tokenize(self.replace_german_umlaute(text.lower()))
 
+    
+    
+    def tokenizing_without_punc_and_sw_with_umlaute(self,text):
+        tokenizer = RegexpTokenizer(r'\w+')
+        word_tokens = tokenizer.tokenize(text.lower())
+        filtered_sentence = [w for w in word_tokens if not w in self.stop_words]
+        filtered_sentence = []
+        for w in word_tokens:
+            if w not in self.stop_words:#
+                filtered_sentence.append(w)
+        filtered_word_tokens = filtered_sentence
+        return filtered_word_tokens
+
+    def tokenizing_without_punc_with_umlaute_sw(self,text):
+        tokenizer = RegexpTokenizer(r'\w+')
+        return tokenizer.tokenize(text.lower())
+
+    
+    
+    
     def tokenizing_complete(self,text):
         tokenizer = RegexpTokenizer(r'\w+')
         word_tokens = tokenizer.tokenize(text.lower())
@@ -52,8 +72,6 @@ class Preprocessor:
         filtered_sentence = []
         for w in word_tokens:
             if w not in self.stop_words:#
-                #str(self.replace_german_umlaute(w))
-                #filtered_sentence.append(w)
                 filtered_sentence.append(self.replace_german_umlaute(w))
         filtered_word_tokens = filtered_sentence
         return filtered_word_tokens
