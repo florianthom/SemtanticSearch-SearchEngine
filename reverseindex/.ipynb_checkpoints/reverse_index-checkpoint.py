@@ -10,44 +10,50 @@ import Preprocessor
 preprocessor = Preprocessor.Preprocessor()
 
 
-# client = MongoClient("localhost")
-# db = client.crawlerdb_WORK_TFIDF
-# collection = db.crawlerdb
+client = MongoClient("localhost")
+db = client.crawlerdb_WORK_TFIDF_2
+collection = db.crawlerdb_lower_withSW
 
-# #Returns cursor with all documents, can be iterated
-# cursor = collection.find({},{ "_id": 1, "text": 1})
-# ergebDict = defaultdict(list)
+client_TO = MongoClient("localhost")
+db_TO = client_TO.crawlerdb_WORK_TFIDF_2
+collection_TO = db_TO.crawlerdb_INVERSE_INDEX
 
-# #Iterate through all documents
-# for doc in cursor:
-#    beforeTokenize = doc['text'].lower()
-#    withTokenize = preprocessor.tokenizing_complete(beforeTokenize)
-#    withStemming = preprocessor.stemming_words(withTokenize)
+#Returns cursor with all documents, can be iterated
+cursor = collection.find({},{ "_id": 1, "text": 1})
+ergebDict = defaultdict(list)
 
-#    for j in withStemming:
-#       ergebDict[j].append(doc['_id'])
-# #Push data to mongoDB   
-# collection.insert(ergebDict)
+#Iterate through all documents
+for doc in cursor:
+   try:
+      beforeTokenize = doc['text'].lower()
+      withTokenize = preprocessor.tokenizing_complete(beforeTokenize)
+      withStemming = preprocessor.stemming_words(withTokenize)
+   except (KeyError, AttributeError) as e:
+      pass   
+   for j in withStemming:
+      try:
+         ergebDict[j].append(str(doc['_id']))
+      except TypeError:
+         pass         
 
-# #Save data locally as .csv-File
-# w = csv.writer(open("output.csv", "w"))
-# for key, val in ergebDict.items():
-#    w.writerow([key, val])
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+#Iteriert ergebDict, speichert Zeile in tempörärer dict und speichert diesen als Dokument
+#dict nimmt keine List an -> Muss als Tupel gespeichert werden
+for key,value in ergebDict.items():
+   t = tuple(value)
+   zwischDict = {"word": key, "documents": t}
+   collection_TO.insert_one(zwischDict)
+
+
+#Gette neue Daten -> Überprüfen ob korrekt gespeichert
+#cursor_TO = collection_TO.find().limit(10)
+#for doc in cursor_TO:
+#   print(doc)
+
+#Save data locally as .csv-File
+#w = csv.writer(open("output.csv", "w"))
+#for key, val in ergebDict.items():
+#   w.writerow([key, val])
+    
+    
+
