@@ -11,11 +11,11 @@ preprocessor = Preprocessor.Preprocessor()
 
 
 client = MongoClient("localhost")
-db = client.crawlerdb
-collection = db.crawlerdb
+db = client.crawlerdb_WORK_TFIDF_2
+collection = db.crawlerdb_lower_withSW
 
 client_TO = MongoClient("localhost")
-db_TO = client_TO.crawlerdb_WORK_TFIDF
+db_TO = client_TO.crawlerdb_WORK_TFIDF_2
 collection_TO = db_TO.crawlerdb_INVERSE_INDEX
 
 #Returns cursor with all documents, can be iterated
