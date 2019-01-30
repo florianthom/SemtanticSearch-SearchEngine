@@ -12,7 +12,7 @@ class GetSearchResultsRPC():
 
     def __init__(self):
         global collectionMongo 
-        databaseMongo = MongoClient("127.0.0.1:27017").crawlerdb_WORK_TFIDF_2
+        databaseMongo = MongoClient("127.0.0.1:27017").crawlerdb_WORK_TFIDF_3
         global search
         search = Search(databaseMongo)
         
@@ -26,6 +26,8 @@ class GetSearchResultsRPC():
         # data muss eine liste / Array sein (kann geändert werden, erfordert aber eine Änderung im Backend)
         data = search.get_search_results(searchString)
         print(data)
+        print(type(data))
+        print(type(data[0]))
         
 
         

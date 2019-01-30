@@ -18,8 +18,12 @@ class Search():
     
     def __init__(self,connectionDatabaseMongo):
         self.connectionDatabaseMongo = connectionDatabaseMongo
-        global collection
-        collection = self.connectionDatabaseMongo.crawlerdb_lower_withSW
+        global collection_working_data
+        collection_working_data = self.connectionDatabaseMongo.lower_without_punctuation_with_SW # work-data
+        global collection_raw_data
+        collection_raw_data = self.connectionDatabaseMongo.crawlerdb # raw-data
+        global collection_inverse_index
+        collection_inverse_index = self.connectionDatabaseMongo.crawlerdb_INVERSE_INDEX # raw-data
         global preprocessor
         preprocessor = Preprocessor.Preprocessor()
         global result_dict_with_ids
@@ -27,7 +31,7 @@ class Search():
         global tfidf_values
         
         #calculate initial tf-idf vectors
-        result_documents_list_REAL = list(collection.find({})) # find returns cursor, like an iterator in scala
+        result_documents_list_REAL = list(collection_working_data.find({})) # find returns cursor, like an iterator in scala
         print("We got ", len(result_documents_list_REAL), " Documents")
         
         #result_document_text_list = [a["text"] for a in result_documents_list_REAL] # wir müssen erst result_documents_list["text"] "entpacken" von cursor
@@ -47,7 +51,6 @@ class Search():
         for i in range(len(result_documents_list_REAL)):
             key = str(result_documents_list_REAL[i]["_id"]) # 5c2fb3c988df422822370767
             result_dict_with_ids[key] = tfidf_values[i]
-        print("test for: result_dict_with_ids", result_dict_with_ids["5c2fb3c988df422822370767"])
         
         # finished pre TF_IDF - Calculation here
         
@@ -59,7 +62,6 @@ class Search():
 
         # get all important documents from db
         result_ids = set()
-        collection_inverse_index = self.connectionDatabaseMongo.crawlerdb_INVERSE_INDEX
         for i in stemmed_search_term:
             print(i)
             record = collection_inverse_index.find({"word": i})
@@ -113,7 +115,7 @@ class Search():
         sorted_d = sorted(new_ids_with_scores.items(), key=operator.itemgetter(1), reverse=True)[0:20]
         ids = [ObjectId(sorted_d[i][0]) for i in range(len(sorted_d))]
 
-        documents = collection.find({"_id" : {"$in" : ids}})
+        documents = collection_raw_data.find({"_id" : {"$in" : ids}})
 
         # attach a new field to the data: "cossim"
         # this field stores the cossim-result
