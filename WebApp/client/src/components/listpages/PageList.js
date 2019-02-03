@@ -30,7 +30,7 @@ class PageList extends Component{
     render(){
             // state.page represents the whole initial state
              // state.page.pages represents the pages array inside the state.page
-        const {pages} = this.props.page; // kommt von mapStateToProps
+        const {pages} = this.props.reducerOutputObject; // kommt von mapStateToProps
         return (
             <Container>
                 <ListGroup>
@@ -61,7 +61,7 @@ class PageList extends Component{
 
 PageList.propTypes = {
     getPages: PropTypes.func.isRequired,
-    page: PropTypes.object.isRequired
+    reducerOutputObject: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
@@ -76,7 +76,7 @@ const mapStateToProps = (state) => ({
     // und von diesem reducer wollen wir nur das page-prop von dem Return (=state)
 
     // das page bei stae.page muss mit dem reducer matchen
-    page: state.page
+    reducerOutputObject: state.pages
 })
 
 export default connect(mapStateToProps,

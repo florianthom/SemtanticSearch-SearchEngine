@@ -72,11 +72,11 @@ class PageModal extends Component {
                     <ModalBody>
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
-                                <Label for="page"> Page </Label>
+                                <Label for="reducerOutputObject"> Page </Label>
                                 <Input
                                 type="text"
                                 name="title"
-                                id="page"
+                                id="reducerOutputObject"
                                 placeholder="Add page"
                                 onChange={this.onChange}>
                                 
@@ -97,7 +97,7 @@ class PageModal extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    page: state.page
+    reducerOutputObject: state.page
 });
 
 export default connect(mapStateToProps, {addPage})(PageModal);

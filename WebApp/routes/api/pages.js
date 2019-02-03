@@ -21,9 +21,14 @@ router.get("/", (req, res) => {
 // @desc    Get all Pages
 // @access  Public
 router.get("/:id", (req, res) => {
+    console.log("id:");
+    console.log(req.params.id);
     Page
-        .find()
-        .then(pages => res.json(pages))
+        .findById(req.params.id)
+        .then(pages => {
+            console.log("pages");
+            res.json(pages);
+        })
 
 });
 

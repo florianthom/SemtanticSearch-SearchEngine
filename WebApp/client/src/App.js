@@ -9,7 +9,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Home from "./components/home/Home";
 import ListPages from "./components/listpages/ListPages";
-
+import Pages from "./components/Pages/Pages"
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import 'react-dates/initialize';
 
@@ -39,7 +39,8 @@ class App extends Component {
                   andernfalls matched / auch bei /about /contact usw.
                 */}
                 <Route path="/" component={Home} exact />
-                <Route path="/list" component={ListPages} /> 
+                <Route path="/pages" component={ListPages} exact/> 
+                <Route path="/pages/:id" component={Pages} exact />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
                 <Route component={Error} />
