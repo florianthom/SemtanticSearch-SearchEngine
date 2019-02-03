@@ -63,10 +63,35 @@ print("Dokumente gesamt (!evtl. nicht in unserem Format)",g)
 
 documents = list(listTokens)
 
-model = gensim.models.Word2Vec (documents, size=300, window=10, min_count=1, workers=10)
-model.train(documents,total_examples=len(documents),epochs=15)
+
+'''
+size
+The size of the dense vector to represent each token or word. If you have very limited data, 
+then size should be a much smaller value. If you have lots of data, its good to experiment with various sizes.
+A value of 100-150 has worked well for me.
+
+window
+The maximum distance between the target word and its neighboring word. If your neighbor's position is
+greater than the maximum window width to the left and the right,
+then, some neighbors are not considered as being related to the target word.
+In theory, a smaller window should give you terms that are more related. If you have lots of data, 
+then the window size should not matter too much, as long as its a decent sized window.
+
+min_count
+Minimium frequency count of words. The model would ignore words that do not statisfy the min_count.
+Extremely infrequent words are usually unimportant, so its best to get rid of those. Unless your dataset 
+is really tiny, this does not really affect the model.
+
+workers
+How many threads to use behind the scenes?
+'''
+
+model = gensim.models.Word2Vec (documents, size=150, window=15, min_count=0, workers=5)
+model.train(documents,total_examples=len(documents),epochs=10)
 
 model.save("word2vec.model")
+#model.wv.save("word2vec.kv")
+model.wv.save_word2vec_format('word2vec.vector')
 
 #w1 = ["Raub"]
 #print("Raub -> \n")
