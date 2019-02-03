@@ -48,46 +48,6 @@ def remove_double_records(listObj):
     return n
 
 
-########## ROHDATEN ##########
-''' 
-{
-    'number': '1288202', 
-    'location': 'Cottbus', 
-    'text': 'Nach einem Fehler beim Überholen....', 
-    'date': '14.12.2018', 
-    '_id': ObjectId('5c2fc96788df4228e7861c93'), 
-    'title': 'Fehler beim Überholen'
-}
-'''
-########## LOWER, STOPWORDS AND PUNCTIONAL REMOVING + TOKEN AND STEMMING ##########
-''' 
-{
-    'number': '1288202', 
-    'stemming_text': ['','' .... ], 
-    'stemming_title': ['','' .... ], 
-    '_id': ObjectId('5c2fc96788df4228e7861c93'), 
-}
-'''
-
-########## LOWER, STOPWORDS AND PUNCTIONAL REMOVING + TOKEN AND LEMMATIZATION ##########
-'''
-{
-    'number': '1288202', 
-    'lemmatization_title': [{'',''},{'',''}], 
-    'lemmatization_text': [{'',''},{'',''}],
-    '_id': ObjectId('5c2fc96788df4228e7861c93'),
-}
-'''
-
-########## LOWER, STOPWORDS AND PUNCTIONAL REMOVING + TOKEN AND LEMMATIZATION ##########
-'''
-{
-    'number': '1288202', 
-    'lemmatization_title': [{'',''},{'',''}], 
-    'lemmatization_text': [{'',''},{'',''}],
-    '_id': ObjectId('5c2fc96788df4228e7861c93'),
-}
-'''
 var1=0
 jsonobjStemming = {
     "number": "",
@@ -208,23 +168,8 @@ for doc in collection.find():
             print("find an dublicate in WITH_UMLAUTE_WITHOUT_PUNC_AND_SW_REMOVE_Collection")
             #Logging.log_exception(exception, False)
         
-        #mylistStemm.append(jsonobjreadyStemm)
         l.append(number)
-
-    #print(i)
-    #print(doc)
     x = doc
-    #print(x)
-    #print(x['number'])
-    #print(x['title'])
-    #print(x['text'])
-    
-    #token_title = preprocessor.tokenizing_complete(x['title'])
-    #token_text = preprocessor.tokenizing_complete(x['text'])
-    #token_number = re.search("[0-9]+", str(x['number']))
-    #token_number = x['number']
-    #thisdict =	dict(number=token_number, title=token_title, text=token_text)
-    #print(thisdict)
 
 
 print("records = " + str(g))
@@ -262,50 +207,4 @@ print("colelction_with_SW  length = ",str(g))
 for doc in collection_without_stopwords.find():
     g=g+1
 print("colelction_withoutSW length = ",str(g))
-
-'''
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["mydatabase"]
-mycol = mydb["customers"]
-
-mylist = [
-  { "name": "Amy", "address": "Apple st 652"},
-  { "name": "Hannah", "address": "Mountain 21"},
-  { "name": "Michael", "address": "Valley 345"},
-  { "name": "Sandy", "address": "Ocean blvd 2"},
-  { "name": "Betty", "address": "Green Grass 1"},
-  { "name": "Richard", "address": "Sky st 331"},
-  { "name": "Susan", "address": "One way 98"},
-  { "name": "Vicky", "address": "Yellow Garden 2"},
-  { "name": "Ben", "address": "Park Lane 38"},
-  { "name": "William", "address": "Central st 954"},
-  { "name": "Chuck", "address": "Main Road 989"},
-  { "name": "Viola", "address": "Sideway 1633"}
-]
-
-mydict = { "name": "John", "address": "Highway 37" }
-x = mycol.insert_one(mydict)
-
-x = mycol.insert_many(mylist)
-#print list of the _id values of the inserted documents:
-print(x.inserted_ids)
-'''
-
-
-
-'''
-jsonobj = {
-          "a": {
-              "b": {
-                      "c": var1,
-                      "d": var2,
-                      "e": [],
-                   },
-
-                },
-            }
-###ebene runter gehen und anfuegen
-jsobj["a"]["b"]["e"].append({"f":var3, "g":var4, "h":var5})
-jsobj["a"]["b"]["e"].append({"f":var6, "g":var7, "h":var8})
-'''
 
