@@ -8,29 +8,24 @@ def replace_german_umlaute(string_text):
     return string_text
 
 def tokenizing_with_sw_and_punc(text):
-    text = self.replace_german_umlaute(text.lower())
+    text = replace_german_umlaute(text.lower())
     # tokenize text
     return [token.text for token in nlp(text)]
 
 def tokenizing_without_punc(text):
-    tokenizer = [ token.text for token in nlp(text) if token.is_punct != True]
-    return tokenizer.tokenize(self.replace_german_umlaute(text.lower()))
+    tokenizer = [ token.text for token in nlp(text.lower) if token.is_punct != True]
+    return replace_german_umlaute(tokenizing_reverse(tokenizer))
 
 def tokenizing_without_punc_and_sw_with_umlaute(text):
-    tokenizer = [ token.text for token in nlp(text) if token.is_punct != True and token.is_stop != True]
-    word_tokens = tokenizer.tokenize(text.lower())
-    return word_tokens
+    return[ token.text for token in nlp(text.lower) if token.is_punct != True and token.is_stop != True]
 
 def tokenizing_without_punc_with_umlaute_sw(text):
-    tokenizer = [ token.text for token in nlp(text) if token.is_punct != True]
-    return tokenizer.tokenize(text.lower())
+    return [ token.text for token in nlp(text.lower) if token.is_punct != True]
 
 def tokenizing_complete(text):
-    tokenizer = [ token.text for token in nlp(text) if token.is_punct != True and token.is_stop != True]
-    word_tokens = tokenizer.tokenize(text)
-    filtered_word_tokens = self.replace_german_umlaute(text.lower())
-    return filtered_word_tokens
-
+    tokenizer = [ token.text for token in nlp(text.lower) if token.is_punct != True and token.is_stop != True]
+    return replace_german_umlaute(tokenizing_reverse(tokenizer))
+    
 def tokenizing_reverse(words):
     return ' '.join(words)#nltk.Text(words)
 
@@ -38,4 +33,4 @@ def stemming_words(word_tokens):
     pass
 
 def lemmating(words):
-    return return [token.lemma_ for token in nlp(words)]
+    return [token.lemma_ for token in nlp(words)]
