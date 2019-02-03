@@ -125,12 +125,12 @@ class PageSearchForm extends React.Component{
 
 PageSearchForm.propTypes = {
     getSearchResult: PropTypes.func.isRequired,
-    search: PropTypes.object.isRequired
+    reducerOutputObject: PropTypes.object.isRequired
 }
 
 
 const mapStateToProps = (state) => ({
-    search: state.search
+    reducerOutputObject: state.search
 })
 
 export default connect(mapStateToProps,

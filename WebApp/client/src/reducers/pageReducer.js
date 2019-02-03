@@ -1,11 +1,12 @@
 // Was passiert hier? der PageReducer stellt Methoden bereit, um den internal state zu manipulieren
 
-import {GET_PAGES, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "../actions/types";
+import {GET_PAGES,GET_PAGE, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "../actions/types";
 
 var date = new Date();
 
 const initialState = {
     pages: [],
+    page: {},
     // reason: fetch data needs a couple milliseconds. Then we get data, this will be set to true and if finished again to false
     // während loading true ist kann man dann einen spinner o.ä. hinzufügen ...
     loading: false
@@ -33,6 +34,12 @@ export default function(state = initialState, action){ // diese 2 Parameter müs
                 pages: state.pages.filter(page => page._id !== action.payload)
 
             };
+        case GET_PAGE:
+        return {
+            ...state, // initial state
+            page: action.payload,
+            loading: false // at the start of the request we set loading to true
+        };
         case ADD_PAGE:
             return {
                 ...state,

@@ -2,7 +2,7 @@
 // alternative wäre fetch-api, aber da muss man mit "http://localhost..." usw arbeiten
 // -> axios weis wo wir uns befinden
 
-import {GET_PAGES, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "./types";
+import {GET_PAGES,GET_PAGE, ADD_PAGE, DELETE_PAGE, PAGES_LOADING} from "./types";
 import axios from "axios";
 
 // es handelt sich hier eigentlich um action-creator
@@ -17,12 +17,29 @@ import axios from "axios";
 export const getPages = () => dispatch => {
     dispatch(setPagesLoading());
     axios
-        .get("api/pages")
+        .get("/api/pages") // api/pages != /api/pages since we start with the url we are currently on with apt/pages
         .then(response => {dispatch({
             type: GET_PAGES,
             payload: response.data
         }); console.log()})
 };
+
+export const getPage = (id) => dispatch => {
+    console.log("in action: ");
+    console.log(id);
+    dispatch(setPagesLoading());
+    axios
+        .get(`/api/pages/${id}`)
+        .then(response => {dispatch({
+            type: GET_PAGE,
+            payload: response.data
+        }); console.log("data: ");})
+        .catch(error => {
+            console.log(error.response)
+        })
+    };
+
+
 
 // get called from the pageList.js by the delete Button
 // its gonna get send to the reducer zusammen mit dem payload

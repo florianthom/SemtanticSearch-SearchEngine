@@ -7,6 +7,7 @@ import pageReducer from "./pageReducer";
 import searchReducer from "./searchReducer";
 
 export default combineReducers({
-    page: pageReducer,
-    search: searchReducer
+    pages: pageReducer,
+    search: searchReducer,
+    
 });

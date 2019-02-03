@@ -11,10 +11,10 @@ class ListSearchResults extends Component{
 
 
     render(){
-        if(!this.props.search){
+        if(!this.props.reducerOutputObject.searchResults){
             return null;
         }
-            const searchResultItem = this.props.search.map(result => (
+            const searchResultItem = this.props.reducerOutputObject.searchResults.map(result => (
                 <ListGroupItem className="my-3" key={result._id.$oid}>
                 {/*              why id.$oid? from python we have to send json to our backend
                              due to zeroRPC or RPC in generall all Attributes have to be serializable
@@ -46,7 +46,7 @@ class ListSearchResults extends Component{
 
 
 const mapStateToProps = (state) => ({
-    search: state.search.searchResults
+    reducerOutputObject: state.search
 });
 
 export default connect(mapStateToProps,
