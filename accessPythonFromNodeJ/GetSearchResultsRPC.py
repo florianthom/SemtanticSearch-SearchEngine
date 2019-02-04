@@ -27,7 +27,7 @@ class GetSearchResultsRPC():
         data = search.get_search_results(searchString)
         print(data)
         print(type(data))
-        print(type(data[0]))
+        #print(type(data[0]))
         
 
         
