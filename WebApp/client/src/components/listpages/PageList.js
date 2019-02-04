@@ -1,3 +1,5 @@
+// route: /pages/
+
 // Verweis zu: https://reactstrap.github.io/components/listgroup/
 
 import React, {Component} from "react";
@@ -77,6 +79,9 @@ const mapStateToProps = (state) => ({
 
     // das page bei stae.page muss mit dem reducer matchen
     reducerOutputObject: state.pages
+
+        //Das dort definierte ReducerOutputObject ist eigentlich der aktuelle store-inhalt (state = store), state.pages heißt, dass store.pageReducerValues.dortgespeicherte Objekte
+
 })
 
 export default connect(mapStateToProps,

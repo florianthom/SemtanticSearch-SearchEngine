@@ -1,3 +1,5 @@
+// route: /pages/
+
 import React, {Component} from "react";
 import {Container} from "reactstrap";
 import PageModal from "./PageModal";

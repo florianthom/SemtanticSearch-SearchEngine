@@ -1,3 +1,5 @@
+// route: /pages/
+
 // auch Container genannt
 // Container werden Components genannt, die mit redux verbunden sind
 // kurz: wenn redux state innerhalb eines Components benutzt wird, wird diese Component auch Container geannnt

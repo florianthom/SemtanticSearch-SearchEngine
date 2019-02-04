@@ -1,6 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
+// why do i store the information here (local)? Better for testing
+// Better solution build new collection in mongo with id of the page as id.
+//  under each id store a list of userOnPage-Times
+var storageForTimeOnPage = {};
+
 // Pages Model
 const Page = require("../../models/Page")
 
@@ -21,15 +26,29 @@ router.get("/", (req, res) => {
 // @desc    Get all Pages
 // @access  Public
 router.get("/:id", (req, res) => {
-    console.log("id:");
-    console.log(req.params.id);
     Page
         .findById(req.params.id)
         .then(pages => {
-            console.log("pages");
-            res.json(pages);
-        })
+            //pages.timeOnPage = storageForTimeOnPage[pages._id] == undefined ? [] : storageForTimeOnPage[pages._id];
+             // ... = spread operator to copy pages attributes to a new obj
+             // why ._doc? because under this attr, the document attr are stored (idk maybe a mongoose thing)
+            result = {...pages._doc, timeOnPage: storageForTimeOnPage[pages._id] == undefined ? [] : storageForTimeOnPage[pages._id]};
+            res.json(result);
+        });
 
+});
+
+router.post("/:id", (req, res) => {
+
+    id = req.params.id;
+    if(storageForTimeOnPage.hasOwnProperty(id))
+    {
+        storageForTimeOnPage[id].push(req.body.time); // time in ms
+    }
+    else
+    {
+        storageForTimeOnPage[id] = [req.body.time]; // time in ms
+    }
 });
 
 // @route   POST api/pages

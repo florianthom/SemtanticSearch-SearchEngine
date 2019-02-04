@@ -30,7 +30,7 @@ export const getPage = (id) => dispatch => {
     dispatch(setPagesLoading());
     axios
         .get(`/api/pages/${id}`)
-        .then(response => {dispatch({
+        .then(response => {dispatch({ // response is (according to backend) {page: page-things, timeOnPage: [times]}
             type: GET_PAGE,
             payload: response.data
         }); console.log("data: ");})
