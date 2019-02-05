@@ -1,6 +1,6 @@
 // Was passiert hier? der PageReducer stellt Methoden bereit, um den internal state zu manipulieren
 
-import {GET_READTIME} from "../actions/types";
+import {GET_MOSTOFTENSEARCHED} from "../actions/types";
 
 
 const initialState = {
@@ -10,10 +10,10 @@ const initialState = {
 export default function(state = initialState, action){ // diese 2 Parameter müssen genau so heißen und sind nicht optional
     switch(action.type){
         // returns the state from the store
-        case GET_READTIME:
+        case GET_MOSTOFTENSEARCHED:
             return {
                 ...state,
-                readTime: action.payload, // kopiert den initial state und fügt die pages aus der Datenbank hinzu
+                mostOftenSearched: action.payload, // kopiert den initial state und fügt die pages aus der Datenbank hinzu
             };
         default:
             return state;

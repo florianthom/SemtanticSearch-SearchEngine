@@ -5,6 +5,14 @@ from bson import json_util
 import random
 from SearchModule import Search
 from Statistics import Statistics
+import sys
+# the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
+#sys.path.append('../TextZusammenfassung')
+#from WordExtractor import extractWordembeddings
+#from Summary import textRank
+#sys.path.append('../accessPythonFromNodeJ')
+
+
 
 
 
@@ -18,6 +26,9 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
+        #global embeddings
+        #embeddings = extractWordembeddings()
+        #print("Embeddings length: ",len(embeddings))
 
         
         
@@ -33,16 +44,15 @@ class GetSearchResultsRPC():
         stat.write_search_term_to_db(searchString, printflag=True)
         
         # data muss eine liste / Array sein (kann geändert werden, erfordert aber eine Änderung im Backend)
-        data = search.get_search_results(searchString)
+        data = search.get_search_results(searchString)        
         
-
         
         
         # der return sollte vielleicht auf maximal 20 Elemente beschränkt sein
         return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
     
     
-    
+
     
 
     def get_searched_words(self):

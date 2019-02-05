@@ -11,5 +11,15 @@ router.get("/", (req, res) => {
     });
 });
 
+router.post("/:id", (req, res) => {
+
+    id = req.params.id;
+    client.invoke("write_articles_longer_read_than_4_s",
+        req.params.id,
+        function(error, reply, streaming) {});
+
+    res.json(JSON.parse({}));
+});
+
 
 module.exports = router

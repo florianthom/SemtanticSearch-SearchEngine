@@ -48,6 +48,11 @@ class AppNavbar extends Component{
                                 </NavLink>
                             </NavItem>
                             <NavItem>
+                                <NavLink href="/statistics">
+                                    Statistiken
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink href="https://github.com/FlorianTh2/SemtanticSearch-SearchEngine">
                                     Github
                                 </NavLink>

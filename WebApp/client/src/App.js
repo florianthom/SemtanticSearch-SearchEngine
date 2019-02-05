@@ -10,7 +10,7 @@ import Contact from "./components/contact/Contact";
 import Home from "./components/home/Home";
 import ListPages from "./components/listpages/ListPages";
 import Pages from "./components/Pages/Pages";
-import PageReadStatistics from "./components/statistics/PageReadStatistics";
+import MostOftenSearchedStatistics from "./components/statistics/MostOftenSearchedStatistics";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import 'react-dates/initialize';
 
@@ -44,7 +44,7 @@ class App extends Component {
                 <Route path="/pages/:id" component={Pages} exact />
                 <Route path="/about" component={About} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/statistics" component={PageReadStatistics} exact />
+                <Route path="/statistics" component={MostOftenSearchedStatistics} exact />
                 <Route component={Error} />
               </Switch>
             </div>
