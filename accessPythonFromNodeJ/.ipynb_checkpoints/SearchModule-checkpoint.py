@@ -14,6 +14,7 @@ import operator
 import sklearn.metrics.pairwise as sklearnPairwise
 from scipy.sparse import hstack,vstack
 from scipy.sparse import csr_matrix
+import GetWord2Vec
 
 class Search():
 
@@ -34,6 +35,7 @@ class Search():
         global tfidf_values
         global preprocessor
         preprocessor = Preprocessor.Preprocessor()
+        getword2vec = GetWord2Vec.GetWord2Vec()
 
         
         #calculate initial tf-idf vectors

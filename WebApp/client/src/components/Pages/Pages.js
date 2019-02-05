@@ -38,7 +38,8 @@ class Pages extends Component{
     {
         console.log("hellooww")
         var time = Math.abs(Date.now() - this.startTime); // in ms
-        axios.post(`/api/pages/${this.props.reducerOutputObject.page._id}`, {time});
+        if(time > 4000)
+            axios.post(`/api/statistics/${this.props.reducerOutputObject.page._id}`, {time});
 
         // event.returnValue = "Hellooww" //-> if not commented: user will get a prompt
     }
