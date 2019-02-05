@@ -18,11 +18,20 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
-        getword2vec = GetWord2Vec.GetWord2Vec()
+        global getword2vec = GetWord2Vec.GetWord2Vec()
         
         
         
-        
+    '''
+    @author Marcel, Micha
+    @version 0.2
+
+    # Word2Vec WordEmbeddings
+    # @param self obj  und suchString als Suchstring ("Haus und Auto" oder "König, Königin und Bärtige !!!!"))
+    # @return JSONdump
+    '''    
+    def word2vec_similarity(self, searchString)
+        return json.dumps(getword2vec.getword2vec(searchString), sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
         
         
     def get_results(self, searchString,dateFROM,dateTO):
