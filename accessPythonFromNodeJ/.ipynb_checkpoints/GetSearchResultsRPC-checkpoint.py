@@ -5,6 +5,7 @@ from bson import json_util
 import random
 from SearchModule import Search
 from Statistics import Statistics
+<<<<<<< HEAD
 import sys
 # the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
 #sys.path.append('../TextZusammenfassung')
@@ -14,6 +15,7 @@ import sys
 
 
 
+import GetWord2Vec
 
 
 
@@ -29,7 +31,7 @@ class GetSearchResultsRPC():
         #global embeddings
         #embeddings = extractWordembeddings()
         #print("Embeddings length: ",len(embeddings))
-
+        getword2vec = GetWord2Vec.GetWord2Vec()
         
         
         
