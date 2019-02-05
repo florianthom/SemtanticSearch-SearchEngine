@@ -89,7 +89,8 @@ model.train(documents,total_examples=len(documents),epochs=15)
 model_vector = model.wv
 
 model_vector.save("word2vec.model")
-model = gensim.models.KeyedVectors.load("word2vec.model", ,mmap='r')
+
+model = gensim.models.KeyedVectors.load("word2vec.model", mmap='r')
 
 #model.wv.save("word2vec.kv")
 #w1 = ["Raub"]
