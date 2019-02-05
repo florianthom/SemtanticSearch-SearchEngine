@@ -32,8 +32,7 @@ class Search():
         global result_dict_with_ids
         global tfidf
         global tfidf_values
-        global preprocessor
-        preprocessor = Preprocessor.Preprocessor()
+
 
         
         #calculate initial tf-idf vectors

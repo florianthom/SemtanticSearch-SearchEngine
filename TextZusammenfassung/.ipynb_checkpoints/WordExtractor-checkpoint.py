@@ -17,7 +17,7 @@ from nltk import tokenize
 def extractWordembeddings():
    # Extract word vectors
     word_embeddings = {}
-    f = open('glove.6B.100d.txt', encoding='utf-8')
+    f = open('../TextZusammenfassung/glove.6B.100d.txt', encoding='utf-8')
     for line in f:
         values = line.split()
         word = values[0]
