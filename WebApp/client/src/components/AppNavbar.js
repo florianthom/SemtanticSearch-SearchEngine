@@ -43,7 +43,7 @@ class AppNavbar extends Component{
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/list">
+                                <NavLink href="/pages">
                                     All Reports
                                 </NavLink>
                             </NavItem>

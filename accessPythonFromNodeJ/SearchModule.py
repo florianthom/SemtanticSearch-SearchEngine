@@ -11,6 +11,9 @@ from numpy.linalg import norm
 import Preprocessor
 from bson import ObjectId
 import operator
+import sklearn.metrics.pairwise as sklearnPairwise
+from scipy.sparse import hstack,vstack
+from scipy.sparse import csr_matrix
 
 class Search():
 
@@ -29,6 +32,9 @@ class Search():
         global result_dict_with_ids
         global tfidf
         global tfidf_values
+        global preprocessor
+        preprocessor = Preprocessor.Preprocessor()
+
         
         #calculate initial tf-idf vectors
         result_documents_list_REAL = list(collection_working_data.find({})) # find returns cursor, like an iterator in scala
@@ -56,53 +62,40 @@ class Search():
         
         
     def get_search_results(self,search_term = "zwei maskierte männer haben heute"):
-        preprocessor = Preprocessor.Preprocessor()
         tokenized_words = preprocessor.tokenizing_without_punc(search_term)
         stemmed_search_term = preprocessor.stemming_words(tokenized_words)
+        
+	# transform search-term to tf-idf vektor (without fit -> only transform)
+        tfidf_search_term = tfidf.transform([search_term]) # transform passt idf nicht an
+        
 
-        # get all important documents from db
+        result_list_from_inverse_index = collection_inverse_index.find({"word": {"$in": tokenized_words}}) ######################################################### tokenized und nicht stemmed
+        
+#        # combine result ids from inverse index with in a set via intersection
+#        try:
+#                result_ids = set(result_list_from_inverse_index[0]["documents"])
+#                for i in result_list_from_inverse_index:
+#                        result_ids = result_ids.intersection(i["documents"])
+#        except IndexError:
+#                result_ids = set()
+
+
+        # combine result ids from inverse index with in a set via union
+        test1 = collection_inverse_index.find({"word": {"$in": tokenized_words}})
         result_ids = set()
-        for i in stemmed_search_term:
-            print(i)
-            record = collection_inverse_index.find({"word": i})
-            ids_in_tupel_now_in_list = list() # ["sadfasdf", "sadfsda", ...]
-            for m in record:
-                current = list(m["documents"]) # ["asdfsadf"]
-                for a in current:
-                    result_ids.add(a)
-
+        for i in test1:
+                result_ids.update(i["documents"])
 
         #unpack result_dict_with_ids: now we need only den Dokumentenvektor
-        less_document_actually = list()
-        for i in result_ids:
-            less_document_actually.append(result_dict_with_ids[i])
+        if(result_ids != set()):
+        	less_document_actually= matrix = vstack([result_dict_with_ids[i] for i in result_ids])
+        else:
+                return []
 
-        # transform search-term to tf-idf vektor (without fit -> only transform)
-        tfidf_search_term = tfidf.transform([search_term]) # transform passt idf nicht an
 
-        # now we dont need sparse-representation of the vectors in "less_document_actually" but the dense-vectors
-        less_documents = list()
-        for a in range(len(less_document_actually)):
-            less_documents.append(less_document_actually[a].toarray().reshape(-1))
-        print("We have the following number of important selected documents for example from inverse index: ", len(less_documents))
-        try:
-            print("We have ",less_documents[0].size, " diffrent words")
-        except IndexError:
-            pass
 
-        # speichern der cos-sim-results
-        cos_sim_results = list()
-        #calculation of the cos-sim
-        for i in range(len(less_documents)): # actually all values in tfidf_values.todense().shape[0] but that is not possible
-                #aufpassen: search term was array now its a string
-            tfidf_values_tmp = less_documents[i]
-            tfidf_search_term_tmp = np.array(tfidf_search_term.todense()).reshape(-1)
-
-            first = np.dot(tfidf_values_tmp, tfidf_search_term_tmp)
-            second = (norm(tfidf_values_tmp)*norm(tfidf_search_term_tmp))
-            cos_sim = first * 1.0/second
-            cos_sim_results.append(cos_sim)
-            #print("cos sim of the current - document with the search-string is: ",cos_sim)
+        #calculate cos_sim
+        cos_sim_results = sklearnPairwise.cosine_similarity(X=matrix,Y=tfidf_search_term).reshape(-1)
 
         # now we need the id to the cos-sim-vectors again and the cos-sim itself (together in a dict)
         new_ids_with_scores = {}

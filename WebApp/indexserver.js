@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const pages = require("./routes/api/pages")
 const tests = require("./routes/api/tests")
 const searches = require("./routes/api/searches")
+const statistics = require("./routes/api/statistics")
+
 var zerorpc = require("zerorpc");
 
 
@@ -29,6 +31,7 @@ mongoose
 app.use("/api/pages", pages)
 app.use("/api/tests", tests)
 app.use("/api/searches", searches)
+app.use("/api/statistics", statistics)
 
 
 const port = process.env.PORT || 5000;

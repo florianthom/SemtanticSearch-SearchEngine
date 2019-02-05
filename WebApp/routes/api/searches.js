@@ -33,5 +33,4 @@ router.get("/", (req, res) => { ///:dateFROM/:dateTO
 
 });
 
-
 module.exports = router
