@@ -24,7 +24,6 @@ collection = db[MONGODB_COLLECTION]
 
 preprocessor = Preprocessor.Preprocessor()
 
-
 i=0
 g=0
 listTokens = []
@@ -63,7 +62,6 @@ print("Dokumente gesamt (!evtl. nicht in unserem Format)",g)
 
 documents = list(listTokens)
 
-
 '''
 size
 The size of the dense vector to represent each token or word. If you have very limited data, 
@@ -86,13 +84,14 @@ workers
 How many threads to use behind the scenes?
 '''
 
-model = gensim.models.Word2Vec (documents, size=150, window=15, min_count=0, workers=5)
-model.train(documents,total_examples=len(documents),epochs=10)
+model = gensim.models.Word2Vec (documents, size=250, window=15, min_count=0, workers=5)
+model.train(documents,total_examples=len(documents),epochs=15)
+model_vector = model.wv
 
-model.save("word2vec.model")
+model_vector.save("word2vec.model")
+model = gensim.models.KeyedVectors.load("word2vec.model", ,mmap='r')
+
 #model.wv.save("word2vec.kv")
-model.wv.save_word2vec_format('word2vec.vector')
-
 #w1 = ["Raub"]
 #print("Raub -> \n")
 #model.wv.most_similar (positive=w1,topn=6)
