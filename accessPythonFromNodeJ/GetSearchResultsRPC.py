@@ -5,7 +5,7 @@ from bson import json_util
 import random
 from SearchModule import Search
 from Statistics import Statistics
-
+import GetWord2Vec
 
 
 
@@ -18,7 +18,7 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
-
+        getword2vec = GetWord2Vec.GetWord2Vec()
         
         
         
