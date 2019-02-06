@@ -46,7 +46,7 @@ class GetSearchResultsRPC():
     # @param self obj  und suchString als Suchstring ("Haus und Auto" oder "König, Königin und Bärtige !!!!"))
     # @return JSONdump
     '''    
-    def word2vec_similarity(self, searchString)
+    def word2vec_similarity(self, searchString):
         return json.dumps(getword2vec.getword2vec(searchString), sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
         
         
@@ -89,8 +89,9 @@ class GetSearchResultsRPC():
     # called when user leave the page
     def write_articles_longer_read_than_4_s(self,results_object_ids):
         print("write")
-        print(results_object_ids)
-        stat.write_read_articles_to_db(self, results_object_ids)
+        id = [results_object_ids]
+        print(id)
+        stat.write_read_articles_to_db(id)
         
         
         

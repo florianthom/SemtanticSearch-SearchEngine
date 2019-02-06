@@ -51,18 +51,21 @@ class PageSearchForm extends React.Component{
 
         if(this.state.startDate && this.state.endDate && this.state.startDate.toDate() < this.state.endDate.toDate())
         {
-            console.log("start date größer als end-Date");
+            console.log("start Date end date")
         }
-        var payload = {
-            searchString: this.state.searchString ? this.state.searchString : null,
-            dateFROM: this.state.startDate ? this.state.startDate.toDate().toString() : null,
-            dateTO: this.state.endDate ? this.state.endDate.toDate().toString() : null
-        }
-        console.log(payload)
-        this.props.getSearchResult(payload);
         
+        if(this.state.searchString)
+        {
+            var payload = {
+                searchString: this.state.searchString ? this.state.searchString : null,
+                dateFROM: this.state.startDate ? this.state.startDate.toDate().toString() : null,
+                dateTO: this.state.endDate ? this.state.endDate.toDate().toString() : null
+            }
+            console.log(payload)
+            this.props.getSearchResult(payload);
 
-        
+        }
+
     }
 
     onChange = (event) => {

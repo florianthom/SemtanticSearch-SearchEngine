@@ -61,16 +61,16 @@ class Search():
         # finished pre TF_IDF - Calculation here
         
         
-    def get_search_results(self,search_term = "zwei maskierte männer haben heute"):
+    def get_search_results(self,search_term = ""):
         tokenized_words = preprocessor.tokenizing_without_punc(search_term)
         stemmed_search_term = preprocessor.stemming_words(tokenized_words)
         
 	# transform search-term to tf-idf vektor (without fit -> only transform)
         tfidf_search_term = tfidf.transform([search_term]) # transform passt idf nicht an
-        
+        print("stemmed words: ", stemmed_search_term)
 
-        result_list_from_inverse_index = collection_inverse_index.find({"word": {"$in": tokenized_words}}) ######################################################### tokenized und nicht stemmed
-        
+#        result_list_from_inverse_index = collection_inverse_index.find({"word": {"$in": stemmed_search_term}}) ######################################################### tokenized und nicht stemmed
+#        print("result_ids: ", list(result_list_from_inverse_index))
 #        # combine result ids from inverse index with in a set via intersection
 #        try:
 #                result_ids = set(result_list_from_inverse_index[0]["documents"])
@@ -81,7 +81,7 @@ class Search():
 
 
         # combine result ids from inverse index with in a set via union
-        test1 = collection_inverse_index.find({"word": {"$in": tokenized_words}})
+        test1 = collection_inverse_index.find({"word": {"$in": stemmed_search_term}})
         result_ids = set()
         for i in test1:
                 result_ids.update(i["documents"])

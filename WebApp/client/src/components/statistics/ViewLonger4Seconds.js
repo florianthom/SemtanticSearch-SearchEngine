@@ -2,9 +2,7 @@ import React, {Component} from "react";
 import {Container, Row, Col, Button} from "reactstrap";
 // muss importiert werden, da wir redux verwenden
 import {connect} from "react-redux";
-import {getMostOftenSearched} from "../../actions/statisticsActions"
 import PropTypes from "prop-types"
-import axios from "axios";
 
 
 
@@ -12,13 +10,43 @@ import axios from "axios";
 class ViewLonger4Seconds extends Component{
 
     render(){
-        var readLonder4s = this.props.reducerOutputObject.results;
-        return (
-            <div>
-                --------------------------------------------
-                {console.log("readLonger")}
-                {console.log(readLonder4s)}
-            </div>
+            var readLonger4s = this.props.reducerOutputObject.results.result_articles_ids_with_counter;
+            return (
+                <div className="mt-5">
+                    <Row className="mt-5">
+                        <Col xs={12} className="text-center">
+                        <h1 className="mt-5">
+                            Länger als 4 Sekunden gelesene Artikel
+                        </h1>
+                        </Col>
+                    </Row>
+
+                    {!readLonger4s ? (
+                        <div>
+                            <Row>
+                                <Col xs={12} className="text-center">
+                                    <h5>
+                                        Bisher wurde keine Seite länger als 4s gelesen
+                                    </h5>
+                                </Col>
+                            </Row>
+                        </div>
+                    ) : (
+                        readLonger4s.map(item => (
+                            <div key={item[0]}>
+                                <Row className="mt-5 text-center">
+                                    <Col xs={6}>
+                                        <h5>{item[0]}</h5>
+                                    </Col>
+                                    <Col xs={6}>
+                                        <h5>{item[1]}</h5>
+                                    </Col>
+                                </Row>
+                            </div>
+
+                        ))
+                    )}
+                </div>
         );
     }
 }
@@ -35,6 +63,4 @@ const mapStateToProps = (state) => ({
     reducerOutputObject: state.statistics,
 })
 
-export default connect(mapStateToProps,
-    {getMostOftenSearched} // redux mapDispatchToProps in short Object-notation-form
-)(ViewLonger4Seconds); // die Klasse
+export default connect(mapStateToProps,)(ViewLonger4Seconds); // die Klasse

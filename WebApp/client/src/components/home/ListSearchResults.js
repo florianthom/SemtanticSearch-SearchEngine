@@ -14,7 +14,6 @@ class ListSearchResults extends Component{
 
     render(){
         if(!this.props.reducerOutputObject.searchResults){
-            console.log("EMMPTYYY")
             return null;
         }
             const searchResultItem = this.props.reducerOutputObject.searchResults.map(result => (

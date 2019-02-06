@@ -7,23 +7,10 @@ import PropTypes from "prop-types"
 import axios from "axios";
 
 
-
-
 class MostOftenSearchedStatistics extends Component{
 
-
-    componentDidMount(){
-        this.props.getMostOftenSearched();
-    }
-
-
     render(){
-        console.log(this.props.reducerOutputObject)
-        if(this.props.reducerOutputObject.results)
-            var readtime = this.props.reducerOutputObject.results.most_often_search_words;
-
-        console.log("hier")
-        console.log(readtime);
+        var mostOftenSearched = this.props.reducerOutputObject.results.most_often_search_words;
         return (
             <div>
                 <Container>
@@ -46,7 +33,8 @@ class MostOftenSearchedStatistics extends Component{
                         </h3>
                     </Col>
                 </Row>
-                {(readtime === undefined || readtime === null || Object.keys(readtime).length === 0) ? 0 : readtime.map(searched => (
+                {
+                    mostOftenSearched.map(searched => (
                     <Row key={searched[0]}>
                         <Col xs={6} className="text-center">
                             <h5>{searched[0]}</h5>
@@ -55,26 +43,22 @@ class MostOftenSearchedStatistics extends Component{
                             <h5>{searched[1]}x</h5>
                         </Col>
                     </Row>
-                    ))}
-                    </Container>
-                    </div>
-                    );
+                    ))
                 }
-            }
-
-
+                </Container>
+                </div>
+        
+        );
+    }
+}
 
 
 MostOftenSearchedStatistics.propTypes = {
-    getMostOftenSearched: PropTypes.func.isRequired,
     reducerOutputObject: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({
-
     reducerOutputObject: state.statistics,
 })
 
-export default connect(mapStateToProps,
-    {getMostOftenSearched} // redux mapDispatchToProps in short Object-notation-form
-)(MostOftenSearchedStatistics); // die Klasse
+export default connect(mapStateToProps)(MostOftenSearchedStatistics);
