@@ -8,6 +8,7 @@ from Statistics import Statistics
 import sys
 # the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
 #sys.path.append('../TextZusammenfassung')
+
 #from WordExtractor import extractWordembeddings
 #from Summary import textRank
 #sys.path.append('../accessPythonFromNodeJ')
@@ -16,7 +17,7 @@ from bson import ObjectId
 
 
 
-#import GetWord2Vec
+import GetWord2Vec
 
 
 
@@ -29,11 +30,11 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
-        #global getword2vec = GetWord2Vec.GetWord2Vec()
         #global embeddings
         #embeddings = extractWordembeddings()
         #print("Embeddings length: ",len(embeddings))
-        #getword2vec = GetWord2Vec.GetWord2Vec()
+        global getword2vec
+        getword2vec = GetWord2Vec.GetWord2Vec()
      
         
         
@@ -47,7 +48,7 @@ class GetSearchResultsRPC():
     # @return JSONdump
     '''    
     def word2vec_similarity(self, searchString):
-        return json.dumps(getword2vec.getword2vec(searchString), sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
+        return json.dumps(self.getword2vec.getword2vec(searchString), sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
         
         
     def get_results(self, searchString,dateFROM,dateTO):
@@ -61,9 +62,11 @@ class GetSearchResultsRPC():
         data = search.get_search_results(searchString)        
         
         
+        synonyme = getword2vec.getword2vec(searchString)
+        result = {"data": data, "synonyme": synonyme}
         
         # der return sollte vielleicht auf maximal 20 Elemente beschränkt sein
-        return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
+        return json.dumps(result, sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
     
     
     # called via /api/statistics   

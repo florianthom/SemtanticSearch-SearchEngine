@@ -1,12 +1,12 @@
 import gensim
-from gensim.models import Word2Vec
 
 class GetWord2Vec:
     def __init__(self):
-        self.model = gensim.models.KeyedVectors.load_word2vec_format("german.model", binary=True)
+        self.model = gensim.models.KeyedVectors.load("word2vec.model", mmap="r")
 
     def getword2vec(self,search_term):
-        listword = search_term.split(' ')
+        text = search_term
+        listword = text.split(' ')
         dictneu = {}
         for w in listword:
             try:

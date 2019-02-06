@@ -12,11 +12,23 @@ import PropTypes from "prop-types"
 class ListSearchResults extends Component{
 
 
+// render(){
+//     return (
+//         <div>
+//             {console.log(this.props.reducerOutputObject) }
+//             {console.log("data: ")}
+//             {console.log(this.props.reducerOutputObject.searchResults.data)}
+//         </div>
+//     )
+// }
+
     render(){
-        if(!this.props.reducerOutputObject.searchResults){
+        console.log("check here")
+        console.log(this.props.reducerOutputObject)
+        if(!(this.props.reducerOutputObject.searchResults.data)){
             return null;
         }
-            const searchResultItem = this.props.reducerOutputObject.searchResults.map(result => (
+            const searchResultItem = this.props.reducerOutputObject.searchResults.data.map(result => (
                 <ListGroupItem className="my-3" key={result._id.$oid}>
                 {/*              why id.$oid? from python we have to send json to our backend
                              due to zeroRPC or RPC in generall all Attributes have to be serializable
@@ -39,11 +51,33 @@ class ListSearchResults extends Component{
         ));
 
         return (
+            <div>
             <Container className="mt-5">
                 <ListGroup>
                         {searchResultItem}
                 </ListGroup>
             </Container>
+
+            {console.log(this.props.reducerOutputObject.searchResults.synonyme)}
+            {this.props.reducerOutputObject.searchString in this.props.reducerOutputObject.searchResults.synonyme ? (
+                <div>
+                    {this.props.reducerOutputObject.searchResults.synonyme[this.props.reducerOutputObject.searchString].toString()}
+                    </div>
+            ):
+            (
+                <div>
+                </div>
+            )}
+            {/* <Container>
+                {this.props.reducerOutputObject.searchResults.synonyme.map(synonym => (
+                    <Container>
+                        {synonym}
+                    </Container>
+                )
+                )
+                }
+            </Container> */}
+            </div>
         );
     }
 }
