@@ -105,7 +105,7 @@ class Search():
             i+=1
 
         # sort by cos-sim and return the first 20 elements
-        sorted_d = sorted(new_ids_with_scores.items(), key=operator.itemgetter(1), reverse=True)[0:20]
+        sorted_d = sorted(new_ids_with_scores.items(), key=operator.itemgetter(1), reverse=True)[0:5]
         ids = [ObjectId(sorted_d[i][0]) for i in range(len(sorted_d))]
 
         documents = collection_raw_data.find({"_id" : {"$in" : ids}})

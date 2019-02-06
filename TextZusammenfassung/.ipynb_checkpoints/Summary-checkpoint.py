@@ -14,17 +14,18 @@ import networkx as nx
 
 from nltk import tokenize
 
-# Extract word vectors
-#word_embeddings = {}
-#f = open('glove.6B.100d.txt', encoding='utf-8')
-#for line in f:
-#    values = line.split()
-#    word = values[0]
-#    coefs = np.asarray(values[1:], dtype='float32')
-#    word_embeddings[word] = coefs
-#f.close()
+def unpackAndSummarize(data, word_embeddings):
+    embeddings = word_embeddings
+    for document in data:  
+        text = document.get("text")
+        if(text):
+            summary = textRank(text, embeddings)
+            document['summary'] = summary
+        else:
+            document["summary"] = "Die Zusammenfassung für diesen Artikel ist in arbeit. Bitte sehen Sie sich direkt den vollständigen Text an."
+            
 
-#print(len(word_embeddings))
+    
 
 def textRank(text, word_embeddings):
     preprocessor = Preprocessor.Preprocessor()
@@ -52,5 +53,11 @@ def textRank(text, word_embeddings):
     
     ranked_sentences = sorted(((scores[i],s) for i,s in enumerate(sentence_list)), reverse=True)
     # Extract top 10 sentences as the summary
-    for i in range(2):
-      print(ranked_sentences[i][1])
+    summary = []
+    try:
+        for i in range(2):
+          summary.append(ranked_sentences[i][1])
+        s = ''.join(summary)
+        return s
+    except IndexError:
+        return "Die Zusammenfassung für diesen Artikel ist in arbeit. Bitte sehen Sie sich direkt den vollständigen Text an."

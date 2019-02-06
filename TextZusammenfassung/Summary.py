@@ -18,8 +18,13 @@ def unpackAndSummarize(data, word_embeddings):
     embeddings = word_embeddings
     for document in data:  
         text = document.get("text")
-        summary = textRank(text, embeddings)
-        document['summary'] = summary
+        if(text):
+            summary = textRank(text, embeddings)
+            document['summary'] = summary
+        else:
+            document["summary"] = "Die Zusammenfassung für diesen Artikel ist in arbeit. Bitte sehen Sie sich direkt den vollständigen Text an."
+            
+
     
 
 def textRank(text, word_embeddings):
@@ -49,7 +54,10 @@ def textRank(text, word_embeddings):
     ranked_sentences = sorted(((scores[i],s) for i,s in enumerate(sentence_list)), reverse=True)
     # Extract top 10 sentences as the summary
     summary = []
-    for i in range(2):
-      summary.append(ranked_sentences[i][1])
-    s = ''.join(summary)
-    return s
+    try:
+        for i in range(2):
+          summary.append(ranked_sentences[i][1])
+        s = ''.join(summary)
+        return s
+    except IndexError:
+        return "Die Zusammenfassung für diesen Artikel ist in arbeit. Bitte sehen Sie sich direkt den vollständigen Text an."

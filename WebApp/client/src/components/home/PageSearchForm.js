@@ -72,6 +72,8 @@ class PageSearchForm extends React.Component{
     }
 
     onChange = (event) => {
+        console.log("name of event: ")
+        console.log(event.target.name)
         this.setState({
             // [event.target.name] ist praktisch der name des <input> tags
             // event.target.value ist sein Wert
@@ -80,11 +82,17 @@ class PageSearchForm extends React.Component{
             [event.target.name]: event.target.value
             
         });
+        console.log("state:")
+        console.log(this.setState)
         if(this.state.startDate){
             console.log(this.state.startDate.toDate())
         }
     }
 
+
+    // this.setState({searchString: suggestionForThisWordOutOfSearchterm[0]}) && 
+
+    
     render(){
         return (
             <div className="container searchform">
@@ -99,6 +107,7 @@ class PageSearchForm extends React.Component{
                                 name="searchString"
                                 placeholder="Search String"
                                 onChange={this.onChange.bind(this)}
+                                id="searchtermInputField"
                                 >                                
                                 </Input>
 
@@ -119,7 +128,7 @@ class PageSearchForm extends React.Component{
                                     </div>
                                 ) : <div>{/* es gibt keine Synonyme momentan }</div>} */}
 
-                                {!(this.props.reducerOutputObject.searchResults == undefined || this.props.reducerOutputObject.searchString == undefined) ? (
+                                {!(this.props.reducerOutputObject.searchResults === undefined || this.props.reducerOutputObject.searchString === undefined || Object.keys(this.props.reducerOutputObject.searchResults.synonyme).length === 0) ? (
                                     <div className="text-left">
                                         <Row className="mr-3"><Col xs={12}> Meinten Sie:</Col></Row>
 
@@ -130,7 +139,7 @@ class PageSearchForm extends React.Component{
                                                         <Col xs={2} className="mr-3">Für {attribute}:</Col>
                                                         <Col xs={9}>
                                                             {this.props.reducerOutputObject.searchResults.synonyme[attribute].map(suggestionForThisWordOutOfSearchterm => (
-                                                            <span key={suggestionForThisWordOutOfSearchterm[0]} className="mr-2">{suggestionForThisWordOutOfSearchterm[0]}</span>
+                                                            <span key={suggestionForThisWordOutOfSearchterm[0]} className="mr-2">{<Button color="link" onClick={(event) => {(document.getElementById("searchtermInputField").value = suggestionForThisWordOutOfSearchterm[0]) && this.onSubmit(event)} /* hier muss Suchterm geändert werden und Submitted werden */}>{suggestionForThisWordOutOfSearchterm[0]}</Button>}</span>
                                                     ))}
                                                     </Col>
                                                     </Row>

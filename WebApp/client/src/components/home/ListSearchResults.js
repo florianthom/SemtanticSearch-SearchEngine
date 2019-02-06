@@ -44,7 +44,7 @@ class ListSearchResults extends Component{
                                 {/* result.number is transmittet as string so this doesnt work well*/}                              
                                  <p>Fallnummer: {Array.isArray(result.number) ? result.number.map(number => (<span key={number}>{number} </span>)) : result.number}, Ort: {result.location}</p>
                                 {/*<p>Fallnummer: {result.number}, Ort: {result.location}</p>*/}
-                                    <p>{result.text.length < 150 ? result.text : result.text.substring(0,150) + "..."}</p>
+                                    <p>{result.summary}</p>
                             </div>
                             </Link>
                             </ListGroupItem>
@@ -58,17 +58,7 @@ class ListSearchResults extends Component{
                 </ListGroup>
             </Container>
 
-            {console.log(this.props.reducerOutputObject.searchResults.synonyme)}
-            {this.props.reducerOutputObject.searchString in this.props.reducerOutputObject.searchResults.synonyme ? (
-                <div>
-                    {this.props.reducerOutputObject.searchResults.synonyme[this.props.reducerOutputObject.searchString].toString()}
-                    </div>
-            ):
-            (
-                <div>
-                    {/* keine Synonyme vorhanden für den gesamten Suchterm */}
-                </div>
-            )}
+
             {/* <Container>
                 {this.props.reducerOutputObject.searchResults.synonyme.map(synonym => (
                     <Container>

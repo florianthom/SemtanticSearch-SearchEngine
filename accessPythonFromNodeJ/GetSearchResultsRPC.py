@@ -6,12 +6,11 @@ import random
 from SearchModule import Search
 from Statistics import Statistics
 import sys
-# the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
-#sys.path.append('../TextZusammenfassung')
-
-#from WordExtractor import extractWordembeddings
-#from Summary import textRank
-#sys.path.append('../accessPythonFromNodeJ')
+#the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
+sys.path.append('../TextZusammenfassung')
+from WordExtractor import extractWordembeddings
+from Summary import unpackAndSummarize
+sys.path.append('../accessPythonFromNodeJ')
 from bson import ObjectId
 
 
@@ -30,9 +29,9 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
-        #global embeddings
-        #embeddings = extractWordembeddings()
-        #print("Embeddings length: ",len(embeddings))
+        global embeddings
+        embeddings = extractWordembeddings()
+        print("Embeddings length: ",len(embeddings))
         global getword2vec
         getword2vec = GetWord2Vec.GetWord2Vec()
      
@@ -59,7 +58,13 @@ class GetSearchResultsRPC():
         stat.write_search_term_to_db(searchString, printflag=True)
         
         # data muss eine liste / Array sein (kann geändert werden, erfordert aber eine Änderung im Backend)
-        data = search.get_search_results(searchString)        
+        
+        
+        
+        data = search.get_search_results(searchString)
+        
+        unpackAndSummarize(data,embeddings) # Added Field to data inplace
+        
         
         
         synonyme = getword2vec.getword2vec(searchString)

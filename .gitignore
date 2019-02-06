@@ -2,3 +2,4 @@
 WebApp/node_modules/
 WebApp/jspm_packages/
 german.model
+TextZusammenfassung/glove.6B.100d.txt
