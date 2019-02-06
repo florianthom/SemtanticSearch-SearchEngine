@@ -5,17 +5,18 @@ from bson import json_util
 import random
 from SearchModule import Search
 from Statistics import Statistics
-<<<<<<< HEAD
 import sys
 # the mock-0.3.1 dir contains testcase.py, testutils.py & mock.py
 #sys.path.append('../TextZusammenfassung')
 #from WordExtractor import extractWordembeddings
 #from Summary import textRank
 #sys.path.append('../accessPythonFromNodeJ')
+from bson import ObjectId
 
 
 
-import GetWord2Vec
+
+#import GetWord2Vec
 
 
 
@@ -31,9 +32,7 @@ class GetSearchResultsRPC():
         #global embeddings
         #embeddings = extractWordembeddings()
         #print("Embeddings length: ",len(embeddings))
-        getword2vec = GetWord2Vec.GetWord2Vec()
-        
-        
+        #getword2vec = GetWord2Vec.GetWord2Vec()
         
         
         
@@ -54,26 +53,35 @@ class GetSearchResultsRPC():
         return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, default=json_util.default)
     
     
-
+    # called via /api/statistics   
+    def get_articles_longer_read_than_4_s(self): # Format of list: [['object_id', count], ['object_id', count], ['object_id', count]]
+        return stat.get_top_read_articles()
     
 
+    # returned außerdem get_articles_longer_read_then_4_s
     def get_searched_words(self):
         result_list = stat.get_top_search_terms(printflag=False) # Format of list: [['word', count], ['word', count], ['word', count]]
-        return json.dumps(result_list, sort_keys=True,ensure_ascii=False,indent=4,default=json_util.default)
+        result_articles_ids_with_counter = stat.get_top_read_articles()
+        print("output")
+        if not result_articles_ids_with_counter:
+            result_articles_ids_with_counter = []
+        result = {"most_often_search_words": result_list, "result_articles_ids_with_counter": result_articles_ids_with_counter}
+        #result = [result_list,result_articles_ids_with_counter]
+        return json.dumps(result, sort_keys=True,ensure_ascii=False,indent=4,default=json_util.default)
         
         
         
         
         
     # called when user leave the page
-    def write_articles_longer_read_than_4_s(results_object_ids): # Format of list: [['object_id', count], ['object_id', count], ['object_id', count]]
-        stat.write_read_articles_to_db(self, results_object_ids, printflag=False)
+    def write_articles_longer_read_than_4_s(self,results_object_ids):
+        print("write")
+        print(results_object_ids)
+        stat.write_read_articles_to_db(self, results_object_ids)
         
         
         
-    # called via /api/statistics   
-    def get_articles_longer_read_than_4_s():
-        stat.get_top_read_articles(printflag=False)
+
         
 
 

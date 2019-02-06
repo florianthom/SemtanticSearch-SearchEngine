@@ -12,11 +12,12 @@ import axios from "axios";
 class ViewLonger4Seconds extends Component{
 
     render(){
-        var readtime = this.props.reducerOutputObject.mostOftenSearched;
-        return 
-        (
+        var readLonder4s = this.props.reducerOutputObject.results;
+        return (
             <div>
-                dfg
+                --------------------------------------------
+                {console.log("readLonger")}
+                {console.log(readLonder4s)}
             </div>
         );
     }
@@ -31,7 +32,7 @@ ViewLonger4Seconds.propTypes = {
 
 const mapStateToProps = (state) => ({
 
-    reducerOutputObject: state.statistics.,
+    reducerOutputObject: state.statistics,
 })
 
 export default connect(mapStateToProps,

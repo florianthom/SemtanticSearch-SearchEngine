@@ -39,7 +39,10 @@ class Pages extends Component{
         console.log("hellooww")
         var time = Math.abs(Date.now() - this.startTime); // in ms
         if(time > 4000)
-            axios.post(`/api/statistics/${this.props.reducerOutputObject.page._id}`, {time});
+        {
+            axios.post(`/api/statistics/${this.props.reducerOutputObject.page._id}`);
+        }
+        axios.post(`/api/pages/${this.props.reducerOutputObject.page._id}`, {time});
 
         // event.returnValue = "Hellooww" //-> if not commented: user will get a prompt
     }
@@ -79,51 +82,55 @@ class Pages extends Component{
                             </Row>
 
                         </h1>
-                        <h4 className="mt-5">
+                        <h5 className="mt-5">
                         <Row>
                             <Col xs={4}>Einsatzort:</Col><Col xs={8}>
                             {page.location}
                             </Col>
                         </Row>
-                        </h4>
-                        <h4 className="mt-5">
+                        </h5>
+                        <h5 className="mt-5">
                         <Row>
                             <Col xs={4}>Einsatzdatum</Col><Col xs={8}>
                             {page.date}
                             </Col>
                         </Row>
                             
-                        </h4>
-                        <h4 className="mt-5">
+                        </h5>
+                        <h5 className="mt-5">
                         <Row>
                             <Col xs={4}>Einsatznummer</Col><Col xs={8}>
                         {page.number}
                         </Col>
                         </Row>
-                        </h4>
-                        <h4 className="mt-5">
+                        </h5>
+                        {(page.timeOnPage && page.timeOnPage.length) ? (
+                        <h5 className="mt-5">
                         <Row>
-                            <Col xs={4}>Beschreibung</Col><Col xs={8}>
-                        {page.text}
-                        </Col>
-                        </Row>
-                        </h4>
-                        <h4 className="mt-5">
-                        <Row>
-                            <Col xs={4}>ID</Col><Col xs={8}>
-                        {page._id}
-                        </Col>
-                        </Row>
-                        </h4>
-                        <h4 className="mt-5 mb-5">
-                        <Row>
-                            <Col xs={4}>Zeiten, wie lange die Seite geöffnet war: </Col><Col xs={8}>
+                            <Col xs={4} className="mt-5">Durchschnittliche Lesezeit: </Col><Col  className="mt-5" xs={8}>
                         {console.log("show object")/* {page.timeOnPage.map(time => (<div>{time}</div>))} */}
                         {console.log(page.timeOnPage)}
                         {page.timeOnPage ? page.timeOnPage.map(time => (<div>{time/1000.0}s</div>)): 0}
                         </Col>
                         </Row>
-                        </h4>
+                        </h5>
+                        ) :  (<div></div>)  }
+                        
+                        
+                        
+                        <Row className="mt-5">
+                            <Col xs={4}> <h5>Beschreibung</h5></Col><Col xs={8}>
+                            <h5>{page.text} </h5>
+                        </Col>
+                        </Row>
+                        <h5 className="mt-5  mb-5">
+                        <Row>
+                            <Col xs={4}>ID</Col><Col xs={8}>
+                        {page._id}
+                        </Col>
+                        </Row>
+                        </h5>
+                        
                         <Button href="/" >Zurück</Button>&nbsp;
 
                     </Container>

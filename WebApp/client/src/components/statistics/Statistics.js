@@ -9,7 +9,7 @@ class Statistics extends Component{
             <div>
                 <Container>
                     <MostOftenSearchedStatistics />
-                    <ViewLonger4Seconds />
+                    {/* <ViewLonger4Seconds /> */}
                 </Container>
             </div>
         );

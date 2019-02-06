@@ -18,7 +18,12 @@ class MostOftenSearchedStatistics extends Component{
 
 
     render(){
-        var readtime = this.props.reducerOutputObject.mostOftenSearched;
+        console.log(this.props.reducerOutputObject)
+        if(this.props.reducerOutputObject.results)
+            var readtime = this.props.reducerOutputObject.results.most_often_search_words;
+
+        console.log("hier")
+        console.log(readtime);
         return (
             <div>
                 <Container>
@@ -42,11 +47,11 @@ class MostOftenSearchedStatistics extends Component{
                     </Col>
                 </Row>
                 {(readtime === undefined || readtime === null || Object.keys(readtime).length === 0) ? 0 : readtime.map(searched => (
-                    <Row>
-                        <Col xs={6} className="text-left">
+                    <Row key={searched[0]}>
+                        <Col xs={6} className="text-center">
                             <h5>{searched[0]}</h5>
                         </Col>
-                        <Col xs={6} className="text-right">
+                        <Col xs={6} className="text-center">
                             <h5>{searched[1]}x</h5>
                         </Col>
                     </Row>

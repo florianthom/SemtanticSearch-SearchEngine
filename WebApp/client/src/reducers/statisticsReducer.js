@@ -13,7 +13,7 @@ export default function(state = initialState, action){ // diese 2 Parameter müs
         case GET_MOSTOFTENSEARCHED:
             return {
                 ...state,
-                mostOftenSearched: action.payload, // kopiert den initial state und fügt die pages aus der Datenbank hinzu
+                results: action.payload
             };
         default:
             return state;

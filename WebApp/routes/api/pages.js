@@ -32,11 +32,21 @@ router.get("/:id", (req, res) => {
             //pages.timeOnPage = storageForTimeOnPage[pages._id] == undefined ? [] : storageForTimeOnPage[pages._id];
              // ... = spread operator to copy pages attributes to a new obj
              // why ._doc? because under this attr, the document attr are stored (idk maybe a mongoose thing)
-            result = {...pages._doc, timeOnPage: storageForTimeOnPage[pages._id] == undefined ? [] : storageForTimeOnPage[pages._id]};
+            result = {...pages._doc, timeOnPage: storageForTimeOnPage[pages._id] == undefined ? [] : (function () {
+                            arr = storageForTimeOnPage[pages._id];
+                            sum = arr.reduce(function(a, b) { return a + b; });
+                            avg = (sum / arr.length).toFixed(1)
+                            return [avg];
+                        })()};
+                        
+
+                
             res.json(result);
         });
 
 });
+
+
 
 router.post("/:id", (req, res) => {
 
