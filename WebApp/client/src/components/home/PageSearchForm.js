@@ -11,7 +11,10 @@ import {
     Form,
     FormGroup,
     Label,
-    Input
+    Input,
+    Container,
+    Row,
+    Col
 } from "reactstrap";
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 
@@ -98,6 +101,63 @@ class PageSearchForm extends React.Component{
                                 onChange={this.onChange.bind(this)}
                                 >                                
                                 </Input>
+
+
+                                {console.log(this.props.reducerOutputObject.searchResults.synonyme)}
+                                {/* wenn noch keine Suchergebnisse vorliegen oder der Suchstring nicht vorliegt, mach nicht, ansonsten outputte*/}
+                                {/* {!(this.props.reducerOutputObject.searchResults == undefined || this.props.reducerOutputObject.searchString == undefined) ? this.props.reducerOutputObject.searchString in this.props.reducerOutputObject.searchResults.synonyme ? (
+                                    <div className="text-left mb-2">
+                                    <span className="mr-3">Meinten Sie:</span> 
+                                        {this.props.reducerOutputObject.searchResults.synonyme[this.props.reducerOutputObject.searchString].map(synonym => (
+                                            <span key={synonym[0]} className="mr-2">{synonym[0]}</span>
+                                        ))}
+                                        </div>
+                                ):
+                                (
+                                    <div>
+                                        {/* keine Synonyme vorhanden für den gesamten Suchterm }
+                                    </div>
+                                ) : <div>{/* es gibt keine Synonyme momentan }</div>} */}
+
+                                {!(this.props.reducerOutputObject.searchResults == undefined || this.props.reducerOutputObject.searchString == undefined) ? (
+                                    <div className="text-left">
+                                        <Row className="mr-3"><Col xs={12}> Meinten Sie:</Col></Row>
+
+                                        {Object.keys(this.props.reducerOutputObject.searchResults.synonyme).map(attribute => (
+                                            <div key={attribute}>
+                                                <Container>
+                                                    <Row className="text-left"> 
+                                                        <Col xs={2} className="mr-3">Für {attribute}:</Col>
+                                                        <Col xs={9}>
+                                                            {this.props.reducerOutputObject.searchResults.synonyme[attribute].map(suggestionForThisWordOutOfSearchterm => (
+                                                            <span key={suggestionForThisWordOutOfSearchterm[0]} className="mr-2">{suggestionForThisWordOutOfSearchterm[0]}</span>
+                                                    ))}
+                                                    </Col>
+                                                    </Row>
+
+                                                </Container>
+                                            </div>
+                                             
+
+                                        ))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                ) : <div>{/* es gibt keine Synonyme momentan */}</div>}
+
+
+
 
                                 
                                 <DateRangePicker

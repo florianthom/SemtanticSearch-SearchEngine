@@ -66,6 +66,7 @@ class ListSearchResults extends Component{
             ):
             (
                 <div>
+                    {/* keine Synonyme vorhanden für den gesamten Suchterm */}
                 </div>
             )}
             {/* <Container>
