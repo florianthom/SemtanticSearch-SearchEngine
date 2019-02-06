@@ -11,17 +11,6 @@ import PropTypes from "prop-types"
 
 class ListSearchResults extends Component{
 
-
-// render(){
-//     return (
-//         <div>
-//             {console.log(this.props.reducerOutputObject) }
-//             {console.log("data: ")}
-//             {console.log(this.props.reducerOutputObject.searchResults.data)}
-//         </div>
-//     )
-// }
-
     render(){
         console.log("check here")
         console.log(this.props.reducerOutputObject)
@@ -41,9 +30,7 @@ class ListSearchResults extends Component{
                                     {result.title}
                                 </h5>
                                 <p>{result.date}</p>
-                                {/* result.number is transmittet as string so this doesnt work well*/}                              
                                  <p>Fallnummer: {Array.isArray(result.number) ? result.number.map(number => (<span key={number}>{number} </span>)) : result.number}, Ort: {result.location}</p>
-                                {/*<p>Fallnummer: {result.number}, Ort: {result.location}</p>*/}
                                     <p>{result.text /*result.summary*/}</p> 
                             </div>
                             </Link>
@@ -57,23 +44,10 @@ class ListSearchResults extends Component{
                         {searchResultItem}
                 </ListGroup>
             </Container>
-
-
-            {/* <Container>
-                {this.props.reducerOutputObject.searchResults.synonyme.map(synonym => (
-                    <Container>
-                        {synonym}
-                    </Container>
-                )
-                )
-                }
-            </Container> */}
             </div>
         );
     }
 }
-
-
 
 const mapStateToProps = (state) => ({
     reducerOutputObject: state.search

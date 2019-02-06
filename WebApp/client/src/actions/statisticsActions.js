@@ -1,7 +1,6 @@
 import {GET_MOSTOFTENSEARCHED} from "./types";
 import axios from "axios";
 
-
 // returns also getReadLonger4Seconds-Results
 export const getMostOftenSearched = () => dispatch => {
     axios
