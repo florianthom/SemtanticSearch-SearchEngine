@@ -90,7 +90,13 @@ class PageSearchForm extends React.Component{
     }
 
 
-    // this.setState({searchString: suggestionForThisWordOutOfSearchterm[0]}) && 
+    // this.setState({searchString: suggestionForThisWordOutOfSearchterm[0]}) &&
+
+    setterForState = (newSearchString) => {
+        console.log("set search value");
+        this.state.searchString = newSearchString;
+        return true
+      }
 
     
     render(){
@@ -136,10 +142,10 @@ class PageSearchForm extends React.Component{
                                             <div key={attribute}>
                                                 <Container>
                                                     <Row className="text-left"> 
-                                                        <Col xs={2} className="mr-3">Für {attribute}:</Col>
-                                                        <Col xs={9}>
+                                                        <Col xs={3} className="mr-3">Für {attribute}:</Col>
+                                                        <Col xs={8}>
                                                             {this.props.reducerOutputObject.searchResults.synonyme[attribute].map(suggestionForThisWordOutOfSearchterm => (
-                                                            <span key={suggestionForThisWordOutOfSearchterm[0]} className="mr-2">{<Button color="link" onClick={(event) => {(document.getElementById("searchtermInputField").value = suggestionForThisWordOutOfSearchterm[0]) && this.onSubmit(event)} /* hier muss Suchterm geändert werden und Submitted werden */}>{suggestionForThisWordOutOfSearchterm[0]}</Button>}</span>
+                                                            <span key={suggestionForThisWordOutOfSearchterm[0]} className="mr-2">{<Button color="link" onClick={(event) => {this.setterForState(suggestionForThisWordOutOfSearchterm[0]) && (document.getElementById("searchtermInputField").value = suggestionForThisWordOutOfSearchterm[0]) && this.onSubmit(event)} /* hier muss Suchterm geändert werden und Submitted werden */}>{suggestionForThisWordOutOfSearchterm[0]}</Button>}</span>
                                                     ))}
                                                     </Col>
                                                     </Row>
@@ -153,6 +159,7 @@ class PageSearchForm extends React.Component{
 
 
 
+{/* (document.getElementById("searchtermInputField").value = suggestionForThisWordOutOfSearchterm[0])  */}
 
 
 

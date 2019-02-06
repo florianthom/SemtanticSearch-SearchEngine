@@ -29,9 +29,13 @@ class GetSearchResultsRPC():
         search = Search(databaseMongo)
         global stat
         stat = Statistics(set_dummy_data=True)
-        global embeddings
-        embeddings = extractWordembeddings()
-        print("Embeddings length: ",len(embeddings))
+        
+        
+        #global embeddings
+        #embeddings = extractWordembeddings()
+        #print("Embeddings length: ",len(embeddings))
+        
+        
         global getword2vec
         getword2vec = GetWord2Vec.GetWord2Vec()
      
@@ -63,7 +67,7 @@ class GetSearchResultsRPC():
         
         data = search.get_search_results(searchString)
         
-        unpackAndSummarize(data,embeddings) # Added Field to data inplace
+        #unpackAndSummarize(data,embeddings) # Added Field to data inplace
         
         
         

@@ -107,7 +107,7 @@ class Pages extends Component{
                         {(page.timeOnPage && page.timeOnPage.length) ? (
                         <h5 className="mt-5">
                         <Row>
-                            <Col xs={4} className="mt-5">Dauer des Besuches: </Col><Col  className="mt-5" xs={8}>
+                            <Col xs={4} className="mt-5">Durchschnittliche Besuchsdauer: </Col><Col  className="mt-5" xs={8}>
                         {console.log("show object")/* {page.timeOnPage.map(time => (<div>{time}</div>))} */}
                         {console.log(page.timeOnPage)}
                         {page.timeOnPage ? page.timeOnPage.map(time => (<div>{time/1000.0}s</div>)): 0}
