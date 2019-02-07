@@ -63,7 +63,7 @@ class PageSearchForm extends React.Component{
         return (
             <div className="container searchform">
                 <div className="my-5">
-                    <h1>Sucheingabe</h1>
+                    <h1>AnSearch</h1>
                 </div>
                 <Form onSubmit={this.onSubmit}>
                             <FormGroup>
@@ -80,7 +80,7 @@ class PageSearchForm extends React.Component{
                                 {/* wenn noch keine Suchergebnisse vorliegen oder der Suchstring nicht vorliegt, mach nicht, ansonsten outputte*/}
                                 {!(this.props.reducerOutputObject.searchResults === undefined || this.props.reducerOutputObject.searchString === undefined || Object.keys(this.props.reducerOutputObject.searchResults.synonyme).length === 0) ? (
                                     <div className="text-left">
-                                        <Row className="mr-3"><Col xs={12}> Meinten Sie:</Col></Row>
+                                        <Row className="mr-3"><Col xs={12}> Alternative Vorschläge</Col></Row>
 
                                         {Object.keys(this.props.reducerOutputObject.searchResults.synonyme).map(attribute => (
                                             <div key={attribute}>
