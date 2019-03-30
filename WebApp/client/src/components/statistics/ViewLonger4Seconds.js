@@ -16,7 +16,7 @@ class ViewLonger4Seconds extends Component{
                     <Row className="mt-5">
                         <Col xs={12} className="text-center">
                         <h1 className="mt-5">
-                            Länger als 4 Sekunden gelesene Artikel
+                            Die meist gelesenen* Artikel
                         </h1>
                         </Col>
                     </Row>
@@ -46,7 +46,11 @@ class ViewLonger4Seconds extends Component{
 
                         ))
                     )}
+                    <div className="mt-5 pt-5 float-right pb-5">
+                                *gelesen: Als gelesen wird ein Artikel angenommen, sobald dieser länger als 4 Sekunden betrachtet wurde
+                    </div>
                 </div>
+                
         );
     }
 }

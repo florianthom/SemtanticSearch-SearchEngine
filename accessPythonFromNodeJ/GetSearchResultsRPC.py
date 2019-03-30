@@ -31,9 +31,9 @@ class GetSearchResultsRPC():
         stat = Statistics(set_dummy_data=True)
         
         
-        #global embeddings
-        #embeddings = extractWordembeddings()
-        #print("Embeddings length: ",len(embeddings))
+        global embeddings
+        embeddings = extractWordembeddings()
+        print("Embeddings length: ",len(embeddings))
         
         
         global getword2vec
@@ -67,7 +67,7 @@ class GetSearchResultsRPC():
         
         data = search.get_search_results(searchString)
         
-        #unpackAndSummarize(data,embeddings) # Added Field to data inplace
+        unpackAndSummarize(data,embeddings) # Added Field to data inplace
         
         
         

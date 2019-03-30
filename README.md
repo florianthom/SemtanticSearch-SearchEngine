@@ -73,6 +73,9 @@ Search-engine: webapp build with MERN-Stack backed with TF-IDF / Levenshtein-alg
    - open ./accessPythonFromNodeJ/WorkNotebookForGetSearch.ipynb
    - uncomment ```#search = Search(DBMongo)``` and ```#data = search.get_search_results(searchString)``` and comment out ```data = list(collectionMongo.find({}).limit(5))```
 
+### Preview
+
+
 
 ## Build with
 

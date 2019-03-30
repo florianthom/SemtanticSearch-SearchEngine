@@ -31,7 +31,7 @@ class ListSearchResults extends Component{
                                 </h5>
                                 <p>{result.date}</p>
                                  <p>Fallnummer: {Array.isArray(result.number) ? result.number.map(number => (<span key={number}>{number} </span>)) : result.number}, Ort: {result.location}</p>
-                                    <p>{result.text /*result.summary*/}</p> 
+                                    <p>{/*result.text*/result.summary}</p> 
                             </div>
                             </Link>
                             </ListGroupItem>

@@ -1,0 +1,26 @@
+
+Vorträglich:
+- inverser index mit stamming, lower-case, ohne synonyme, ohne stoppwörter
+- tf-idf vektoren
+	set s der vorhandenen Wörter speichern
+
+Suche:
+	- such-term x kommt
+	- aus x alle Stoppwörter entfernen + lowercase
+	- aus x alle Wörter entfernen, die in s nicht vorhanden
+	- ID-Liste i erstellen, welche die ids der Dokumente speichert, welche mit dem Suchterm x per tf-idf verglichen werden sollen 
+	- für jedes Wort in x: in den inversen Index gucken und die Verweis-IDs in i speichern
+	(- für jedes Wort in x die Synonyme bestimmen und für jedes dieser Synonyme in den inversen Index gucken und die Verweis-IDs in i speichern)
+	- x ohne stoppwörter und ohne Wörter, die nicht in s vorkommen (eigentlich in Rohform, aber der TF-IDF vektor ist bei jedem Document in der gleichen Dimension, d.h. wenn in x ein Wort vorkommt, 		dass in s nicht vorhanden -> geht nicht) in Dokumentenvektor umwandeln
+	-> eventuell schon mit stoppwörtern, aber auf jedenfall ohne Wörter, die in in s vorkommen
+	-> per https://medium.freecodecamp.org/how-to-process-textual-data-using-tf-idf-in-python-cd2bbc0a94a3 (muss gleiche Dimension wie alle anderen Vektoren haben)
+	-> wie IDF: 2 Varianten: 1. normal d.h. 0 sinn da nur 1 Document undzwar x oder 2. idf bezüglich aller anderen Documents
+	- Cosinus-Sim zwischen x und jedem Dokument von i (aber nicht untereinander) (jeweils o in seiner Rohform)
+	-filtern nach Date-Einschränkung
+	- sortieren nach meister Simmilarity
+	- die ersten 10 nehmen
+
+
+Fragen:
+- Was ist mit title?
+- Was ist mit Verfahrensnummer?
