@@ -75,7 +75,9 @@ Search-engine: webapp build with MERN-Stack backed with TF-IDF / Levenshtein-alg
 
 ### Preview
 
+![first.png](imagesREADME/first.png)
 
+![second.png](imagesREADME/second.png)
 
 ## Build with
 
