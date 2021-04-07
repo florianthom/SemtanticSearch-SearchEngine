@@ -1,6 +1,6 @@
 # AnSearch
 
-Search-engine: webapp build with MERN-Stack backed with TF-IDF / Levenshtein-algorithm implemented in python.
+Search-engine: webapp to display police-reports from the official police website. Build with MERN-Stack backed with TF-IDF / Levenshtein-algorithm implemented in python.
 
 ## Learned
 - VS code
